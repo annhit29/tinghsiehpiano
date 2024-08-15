@@ -1,37 +1,41 @@
 ---
 import { HeroSlider1, HeroSlider3 } from "@static/images";
 import Layout from "../layouts/Layout.astro";
-import { Hero } from "@modules/Hero";
+import { Pianist } from "@modules/Hero";
 ---
 
+<!-- the highest level of the page, the homepage. -->
+
+<!-- todo: language switching: FR/TW/EN/DE. -->
+
 <Layout
-    title="Cybernetic | Homepage"
+    title="Pianist | Homepage"
     description="YOUR META DESCRIPTION FOR SEO"
 >
     <main class="page-content">
-        <Hero
+        <Pianist
             client:load
-            heroType="fullPageSlider"
+            pianistType="fullPageSlider"
             data={[
                 {
-                    subtitle: "Cybernetic",
-                    title: "Cybernetic",
+                    subtitle: "Pianist",
+                    title: "Wei-Ting HSIEH",
                     background: HeroSlider1.src,
                     paragraph:
-                        "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                        "About me",
                     button: {
-                        text: "Get pro version",
-                        link: "https://codexcode.store/themes/cybernetic-website-template",
+                        text: "Wei-Ting",
+                        link: "/aboutMe",
                     },
                 },
                 {
-                    subtitle: "Be Safe, Be Secure, Be Cybernetic",
-                    title: "infinite",
+                    subtitle: "Pianist",
+                    title: "Wei-Ting HSIEH",
                     background: HeroSlider3.src,
-                    paragraph: "",
+                    paragraph: "Enjoy the music",
                     button: {
-                        text: "Take a look",
-                        link: "/infinite",
+                        text: "Listen",
+                        link: "/music",
                     },
                 },
             ]}

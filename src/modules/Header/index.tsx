@@ -1,3 +1,5 @@
+// the highest level of the header component:
+
 import { Logo } from "@components/Logo";
 import * as S from "./styled";
 import { Navigation } from "@components/Navigation";

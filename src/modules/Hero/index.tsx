@@ -17,21 +17,21 @@ import {
  * this way we can avoid passing wrong props
  * and also we can have a better understanding of the component
  */
-type HeroProps =
+type PianistProps =
     | {
-          heroType: "textImage";
+          pianistType: "textImage";
           data: TextImageProps;
       }
     | {
-          heroType: "fullPageSlider";
+          pianistType: "fullPageSlider";
           data: FullPageSliderProps["content"];
       }
     | {
-          heroType: "ParallaxImage";
+          pianistType: "ParallaxImage";
           data: ParallaxImageProps;
       };
 
-export const Hero: FC<HeroProps> = ({ heroType, data, ...rest }) => {
+export const Pianist: FC<PianistProps> = ({ pianistType: pianistType, data, ...rest }) => {
     /*
      * content can be passed as children or as content prop
      * if content is passed as children, it will be used as content
@@ -41,15 +41,15 @@ export const Hero: FC<HeroProps> = ({ heroType, data, ...rest }) => {
         return null;
     }
 
-    let HeroTypeOutput;
-    switch (heroType) {
+    let PianistTypeOutput;
+    switch (pianistType) {
         case "textImage":
-            HeroTypeOutput = (
+            PianistTypeOutput = (
                 <TextImage {...(data as TextImageProps)} {...rest} />
             );
             break;
         case "fullPageSlider":
-            HeroTypeOutput = (
+            PianistTypeOutput = (
                 <FullPageSlider
                     content={data as FullPageSliderProps["content"]}
                     {...rest}
@@ -57,17 +57,17 @@ export const Hero: FC<HeroProps> = ({ heroType, data, ...rest }) => {
             );
             break;
         case "ParallaxImage":
-            HeroTypeOutput = (
+            PianistTypeOutput = (
                 <ParallaxImage {...(data as ParallaxImageProps)} {...rest} />
             );
     }
 
     const isFullWidth =
-        heroType === "fullPageSlider" || heroType === "ParallaxImage";
+        pianistType === "fullPageSlider" || pianistType === "ParallaxImage";
 
     return (
-        <S.HeroWrapper $isFullWidth={isFullWidth}>
-            {HeroTypeOutput}
-        </S.HeroWrapper>
+        <S.PianistWrapper $isFullWidth={isFullWidth}>
+            {PianistTypeOutput}
+        </S.PianistWrapper>
     );
 };

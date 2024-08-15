@@ -5,7 +5,7 @@ import { TextBox } from "@components/textBox";
 import { Container } from "@components/Container";
 import { FadeIn } from "@utils/animations/FadeIn";
 
-type ServiceCards = {
+type DiscographyCards = {
     title?: string;
     description?: string;
     cards?: {
@@ -14,13 +14,13 @@ type ServiceCards = {
     }[];
 };
 
-export const ServiceCards: FC<ServiceCards> = ({
+export const DiscographyCards: FC<DiscographyCards> = ({
     cards,
     description,
     title,
 }) => {
-    // do not render if there are no cards
 
+    // do not render if there are no cards
     if (!cards || !cards.length) {
         return null;
     }
@@ -30,25 +30,27 @@ export const ServiceCards: FC<ServiceCards> = ({
             <FadeIn key={index}>
                 <TextBox>
                     <h3>{card.title}</h3>
-                    <p>{card.description}</p>
+                    {/* Use dangerouslySetInnerHTML to be able to render HTML content as well: */}
+                    <div dangerouslySetInnerHTML={{ __html: card.description }} />
+                    {/* todo: dangerouslySetInnerHTML lets one to put an untrusted source. Change to allowing only trusted source.*/}
                 </TextBox>
             </FadeIn>
         );
     });
 
     return (
-        <S.ServiceCardsStyled>
+        <S.DiscographyCardsStyled>
             <Container>
                 {title && description && (
                     <FadeIn>
-                        <S.ServiceCardsHeading>
+                        <S.DiscographyCardsHeading>
                             {description && <p>{description}</p>}
                             {title && <h2>{title}</h2>}
-                        </S.ServiceCardsHeading>
+                        </S.DiscographyCardsHeading>
                     </FadeIn>
                 )}
-                <S.ServiceCardsGrid>{cardsElements}</S.ServiceCardsGrid>
+                <S.DiscographyCardsGrid>{cardsElements}</S.DiscographyCardsGrid>
             </Container>
-        </S.ServiceCardsStyled>
+        </S.DiscographyCardsStyled>
     );
 };

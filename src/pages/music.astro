@@ -1,0 +1,92 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Pianist } from "@modules/Hero";
+import { HeroSlider3, InfiniteImg1, InfiniteImg2 } from "@static/images";
+import { DiscographyCards } from "@modules/DiscographyCards";
+import { Footer } from "@modules/Footer";
+---
+<!-- todo: cont add embedded YT video links for Pianist component -->
+<Layout
+    title="Pianist | Homepage"
+    description="YOUR META DESCRIPTION FOR SEO"
+>
+    <main class="page-content">
+        <Pianist
+            pianistType="ParallaxImage"
+            client:visible
+            data={{
+                image: HeroSlider3.src,
+                content: {
+                    title: "MUSIC",
+                    paragraph:
+                        "Enjoy the music of Wei-Ting HSIEH, a talented pianist.",
+                },
+            }}
+        />
+        <DiscographyCards
+            description="MUSIC"
+            title="Discography"
+            client:visible
+            cards={[
+                                {
+                    title: "Listen on Spotify",
+                    description:
+                        `
+                        <iframe style="border-radius:12px" 
+                            src="https://open.spotify.com/embed/artist/05P8KWbEcJD8NWTUbAfjpn?utm_source=generator&theme=0" 
+                            width="100%" 
+                            height="352" 
+                            frameborder="0" 
+                            allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy">
+                        </iframe>
+                        `,
+                },
+                // {
+                //     title: "Cyber - development",
+                //     description:
+                //         "lorem ipsum lorem ipsum lorem ipsum lorem ipsum .",
+                // },
+                // {
+                //     title: "Cyber - Security",
+                //     description:
+                //         "lorem ipsum lorem ipsum lorem ipsum lorem ipsum .",
+                // },
+            ]}
+        />
+
+        <Pianist
+            pianistType="textImage"
+            client:visible
+            data={{
+                image: {
+                    src: InfiniteImg1.src,
+                    width: 590,
+                    height: 300,
+                    alt: "Pianist Image",
+                },
+                title: "Wei-Ting Hsieh in the second round of the 18th Chopin Competition",
+                paragraph:
+                    "Watch",
+            }}
+        />
+        <Pianist
+            pianistType="textImage"
+            client:visible
+            data={{
+                switchPlaces: true,
+                image: {
+                    src: InfiniteImg2.src,
+                    width: 590,
+                    height: 300,
+                    alt: "Hero Image",
+                },
+                title: "Infinite Community",
+                paragraph:
+                    "with infinite dashboard you can easily manage your community, create posts, and interact with your followers.",
+            }}
+        />
+    </main>
+    <Footer />
+</Layout>

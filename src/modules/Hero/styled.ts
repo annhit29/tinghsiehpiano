@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const HeroWrapper = styled.section<{
+export const PianistWrapper = styled.section<{
     $isFullWidth?: boolean;
 }>`
     display: flex;

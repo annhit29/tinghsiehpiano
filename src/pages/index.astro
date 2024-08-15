@@ -1,16 +1,40 @@
 ---
-
+import { HeroSlider1, HeroSlider3 } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "@modules/Hero";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+    title="Cybernetic | Homepage"
+    description="YOUR META DESCRIPTION FOR SEO"
+>
+    <main class="page-content">
+        <Hero
+            client:load
+            heroType="fullPageSlider"
+            data={[
+                {
+                    subtitle: "Cybernetic",
+                    title: "Cybernetic",
+                    background: HeroSlider1.src,
+                    paragraph:
+                        "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    button: {
+                        text: "Get pro version",
+                        link: "https://codexcode.store/themes/cybernetic-website-template",
+                    },
+                },
+                {
+                    subtitle: "Be Safe, Be Secure, Be Cybernetic",
+                    title: "infinite",
+                    background: HeroSlider3.src,
+                    paragraph: "",
+                    button: {
+                        text: "Take a look",
+                        link: "/infinite",
+                    },
+                },
+            ]}
+        />
+    </main>
+</Layout>

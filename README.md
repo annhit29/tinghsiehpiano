@@ -42,6 +42,18 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+## What does this project use?
+This is a project written in Typescript programming language, with the use of Astro web development framework which allows us to use multiple frontend frameworks, including the React UI development library.
+- TypeScript: the programming language "JavaScript with types". It doesn't render anything, it's a programming language.
+- React: a library specifically for building user interfaces focusing on rendering interactive UIs.
+- Astro: a web framework and a static site generator used for building static websites which supports multiple frontend frameworks. It renders static HTML with optional JavaScript for interactivity.
+
+## Install other dependencies for this project:
+1. React and React DOM: `npm install react react-dom`
+2. Swiper (for swiper/react, swiper/modules, and swiper/css): `npm install swiper`
+3. Emotion (for @emotion/styled and @emotion/react): `npm install @emotion/styled @emotion/react`
+4. @astrojs/react: `npx astro add react`, otherwise the problem of [No matching renderer found](https://docs.astro.build/en/reference/errors/no-matching-renderer/) will persist and the terminal will run the project. If the previous command to install @astrojs/react doesn't work, please read [this page](https://docs.astro.build/en/guides/integrations-guide/react/) to try to install manually.
+
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

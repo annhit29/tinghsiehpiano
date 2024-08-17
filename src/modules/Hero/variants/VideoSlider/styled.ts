@@ -35,7 +35,8 @@ export const VideoSliderHeading = styled.div`
 
 export const VideoTitle = styled.div`
     color: ${Theme.secondary};
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: bold;
     line-height: 1.2;
     margin-bottom: 10px;
 `;
@@ -45,15 +46,6 @@ export const VideoSliderStyled = styled.div`
     width: 100%;
     height: auto;
 `;
-
-// export const VideoSlide = styled.div`
-//     width: 560px;
-//     height: 315px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// `;
-
 
 export const VideoSlide = styled.div`
     display: flex;
@@ -68,38 +60,28 @@ export const VideoSlide = styled.div`
 `;
 
 export const SlideNavLeft = styled.div`
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
+    position: absolute; // Absolute position
+    top: 60%; // 60% from the top
+    left: 120px; // 120px from the left
+    transform: translateY(-50%); // Center vertically
     cursor: pointer;
     z-index: 10;
 
-    &.disabled {
-        opacity: 0.5;
-        pointer-events: none;
-    }
-
-    svg {
-        fill: ${Theme.primary};
+    &.disabled svg {
+        fill: rgba(0, 0, 0, 0.5); // Semi-transparent when disabled
     }
 `;
 
 export const SlideNavRight = styled.div`
     position: absolute;
-    top: 50%;
-    right: 20px;
+    top: 60%;
+    right: 120px;
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 10;
 
-    &.disabled {
-        opacity: 0.5;
-        pointer-events: none;
-    }
-
-    svg {
-        fill: ${Theme.primary};
+    &.disabled svg {
+        fill: rgba(0, 0, 0, 0.5); // Semi-transparent when disabled
     }
 `;
 
@@ -139,3 +121,7 @@ export const PlayButton = styled.div`
         margin-left: 5px;
     }
 `;
+
+// todo: cont: ask chatGPT on conversation https://chatgpt.com/c/5115a22e-9804-4108-b9f2-9d6ff0a73573
+// 1) SlideNavLeft and SlideNavRight should be transparent when one of them is onSlideChange
+// 2) SlideNavLeft and SlideNavRight should be semi-transparent when isLeftDisabled OR isRightDisabled OR both are true.

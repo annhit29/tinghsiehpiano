@@ -74,10 +74,10 @@ export const VideoSlider: FC<VideoSliderProps> = ({ title, videoTitles, videos }
                 ))}
             </SwiperSlider>
             <S.SlideNavLeft className={`swiper-button-prev ${isLeftDisabled ? 'disabled' : ''}`}>
-                <Icon iconData="arrowLeft" alt="left arrow" />
+                <Icon iconData="arrowLeftDark" alt="left arrow" />
             </S.SlideNavLeft>
             <S.SlideNavRight className={`swiper-button-next ${isRightDisabled ? 'disabled' : ''}`}>
-                <Icon iconData="arrowRight" alt="right arrow" />
+                <Icon iconData="arrowRightDark" alt="right arrow" />
             </S.SlideNavRight>
             <div className="swiper-pagination"></div>
             </Container>

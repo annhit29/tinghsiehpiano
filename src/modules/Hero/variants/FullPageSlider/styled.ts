@@ -225,7 +225,7 @@ export const FullPageSliderTextToSlide = styled.span`
         left: 50%;
         right: unset;
         bottom: 45px;
-        transform: translateX(-50%);
+        transform: translateX(-50%); //Center horizontally
         justify-content: center;
         width: 100%;
     }

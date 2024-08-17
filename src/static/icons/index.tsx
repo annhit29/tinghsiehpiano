@@ -4,6 +4,8 @@ import IconArrowDown from "./icon-arrow-down.svg";
 import IconArrowCircle from "./icon-arrow-circle.svg";
 import IconArrowRight from "./icon-arrow-right.svg";
 import IconArrowLeft from "./icon-arrow-left.svg";
+import IconArrowRightDark from "./icon-arrow-right-secondary-color.svg"
+import IconArrowLeftDark from "./icon-arrow-left-secondary-color.svg"
 import IconFacebook from "./icon-facebook.svg";
 import IconInstagram from "./icon-instagram.svg";
 import IconTwitter from "./icon-twitter.svg";
@@ -16,6 +18,8 @@ export const icons = {
     arrowCircle: IconArrowCircle,
     arrowRight: IconArrowRight,
     arrowLeft: IconArrowLeft,
+    arrowRightDark: IconArrowRightDark,
+    arrowLeftDark: IconArrowLeftDark,
     facebook: IconFacebook,
     instagram: IconInstagram,
     twitter: IconTwitter,

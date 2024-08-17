@@ -12,6 +12,7 @@ export const MusicCardsStyled = styled.section`
     position: relative;
 `;
 
+// MusicCardsHeading is a styled component that contains the description <p> and the title <h2> of the MusicCards section.
 export const MusicCardsHeading = styled.div`
     color: ${Theme.secondary};
 

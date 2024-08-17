@@ -46,7 +46,7 @@ export const SwiperSlider: FC<SwiperSliderProps> = ({
             // default values for the slider
             modules={modules ? modules : []}
             slidesPerView={1}
-            speed={4000}
+            speed={1250} // 1.250 second for swiping from one slide to another
             spaceBetween={30}
             // custom values for the slider
             {...options}

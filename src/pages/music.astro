@@ -1,13 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Pianist } from "@modules/Hero";
-import { HeroSlider3, InfiniteImg1, InfiniteImg2 } from "@static/images";
-import { DiscographyCards } from "@modules/DiscographyCards";
+import { PianistSlider3, InfiniteImg1, InfiniteImg2 } from "@static/images";
+import { MusicCards } from "@modules/MusicCards";
+import { VideoSlider } from "@modules/Hero/variants/VideoSlider/VideoSlider";
 import { Footer } from "@modules/Footer";
 ---
-<!-- todo: cont add embedded YT video links for Pianist component -->
+
 <Layout
-    title="Pianist | Homepage"
+    title="Wei-Ting Pianist | Homepage"
     description="YOUR META DESCRIPTION FOR SEO"
 >
     <main class="page-content">
@@ -15,7 +16,7 @@ import { Footer } from "@modules/Footer";
             pianistType="ParallaxImage"
             client:visible
             data={{
-                image: HeroSlider3.src,
+                image: PianistSlider3.src,
                 content: {
                     title: "MUSIC",
                     paragraph:
@@ -23,13 +24,13 @@ import { Footer } from "@modules/Footer";
                 },
             }}
         />
-        <DiscographyCards
+        <MusicCards
             description="MUSIC"
             title="Discography"
             client:visible
             cards={[
                                 {
-                    title: "Listen on Spotify",
+                    title: "Fantasiestücke, Robert Schumann",
                     description:
                         `
                         <iframe style="border-radius:12px" 
@@ -43,50 +44,26 @@ import { Footer } from "@modules/Footer";
                         </iframe>
                         `,
                 },
-                // {
-                //     title: "Cyber - development",
-                //     description:
-                //         "lorem ipsum lorem ipsum lorem ipsum lorem ipsum .",
-                // },
-                // {
-                //     title: "Cyber - Security",
-                //     description:
-                //         "lorem ipsum lorem ipsum lorem ipsum lorem ipsum .",
-                // },
+            ]}
+        />
+        
+        <VideoSlider
+            title="Videos"
+            client:visible
+            videoTitles={
+                [
+                "Wei-Ting HSIEH, second round, 18th Chopin Competition",
+                "Wei-Ting HSIEH, first round, 18th Chopin Competition",
+                "Wei-Ting HSIEH, J.Ph. Rameau: Le Rappel des Oiseaux"
+                ]
+            }
+            videos={[
+                "https://www.youtube.com/embed/orwTW279nEs?si=xwekzfO9vIfNG0Tf",
+                "https://www.youtube.com/embed/mm9pfniDt_E?si=-gWNbKLGfUUPvpLJ",
+                "https://www.youtube.com/embed/I2pEK4Fznw4?si=HYTDUXpJYvseBja5"
             ]}
         />
 
-        <Pianist
-            pianistType="textImage"
-            client:visible
-            data={{
-                image: {
-                    src: InfiniteImg1.src,
-                    width: 590,
-                    height: 300,
-                    alt: "Pianist Image",
-                },
-                title: "Wei-Ting Hsieh in the second round of the 18th Chopin Competition",
-                paragraph:
-                    "Watch",
-            }}
-        />
-        <Pianist
-            pianistType="textImage"
-            client:visible
-            data={{
-                switchPlaces: true,
-                image: {
-                    src: InfiniteImg2.src,
-                    width: 590,
-                    height: 300,
-                    alt: "Hero Image",
-                },
-                title: "Infinite Community",
-                paragraph:
-                    "with infinite dashboard you can easily manage your community, create posts, and interact with your followers.",
-            }}
-        />
     </main>
     <Footer />
 </Layout>

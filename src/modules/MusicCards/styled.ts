@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Theme } from "@styles/colors";
 import { MediaQuery } from "@styles/mediaQuery";
 
-export const DiscographyCardsStyled = styled.section`
+export const MusicCardsStyled = styled.section`
     background: ${Theme.primary};
     padding-top: 90px;
     border-top-left-radius: 50px;
@@ -12,7 +12,7 @@ export const DiscographyCardsStyled = styled.section`
     position: relative;
 `;
 
-export const DiscographyCardsHeading = styled.div`
+export const MusicCardsHeading = styled.div`
     color: ${Theme.secondary};
 
     margin-bottom: 40px;
@@ -34,7 +34,7 @@ export const DiscographyCardsHeading = styled.div`
     }
 `;
 
-export const DiscographyCardsGrid = styled.div`
+export const MusicCardsGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;

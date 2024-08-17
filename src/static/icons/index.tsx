@@ -3,21 +3,25 @@ import { type FC } from "react";
 import IconArrowDown from "./icon-arrow-down.svg";
 import IconArrowCircle from "./icon-arrow-circle.svg";
 import IconArrowRight from "./icon-arrow-right.svg";
+import IconArrowLeft from "./icon-arrow-left.svg";
 import IconFacebook from "./icon-facebook.svg";
 import IconInstagram from "./icon-instagram.svg";
 import IconTwitter from "./icon-twitter.svg";
 import IconLinkedIn from "./icon-linkedin.svg";
 import IconGithub from "./icon-github.svg";
+import IconPlayArrow24dp from "./icon-play-arrow-24dp.svg";
 
 export const icons = {
     arrowDown: IconArrowDown,
     arrowCircle: IconArrowCircle,
     arrowRight: IconArrowRight,
+    arrowLeft: IconArrowLeft,
     facebook: IconFacebook,
     instagram: IconInstagram,
     twitter: IconTwitter,
     linkedin: IconLinkedIn,
     github: IconGithub,
+    playArrow24dp: IconPlayArrow24dp,
 };
 
 type IconName = {

@@ -4,7 +4,7 @@ import HeroImg from "./hero-img.webp";
 import Logo from "./logo.webp";
 
 import PianistSlider1 from "./homepage1.webp";
-import HeroSlider2 from "./hero-slider-02.webp";
+import PianistSlider2 from "./hero-slider-02.webp";
 import PianistSlider3 from "./homepage2.webp";
 
 import InfiniteImg1 from "./infinite-img-1.webp";
@@ -65,9 +65,9 @@ export const Image: FC<ImageProps> = ({
 // default export of the images
 export {
     PreviewPng,
-    PianistSlider1 as HeroSlider1,
-    HeroSlider2,
-    PianistSlider3 as HeroSlider3,
+    PianistSlider1 as PianistSlider1,
+    PianistSlider2 as PianistSlider2,
+    PianistSlider3 as PianistSlider3,
     InfiniteImg1,
     InfiniteImg2,
 };

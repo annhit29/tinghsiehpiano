@@ -5,7 +5,7 @@ import { TextBox } from "@components/textBox";
 import { Container } from "@components/Container";
 import { FadeIn } from "@utils/animations/FadeIn";
 
-type DiscographyCards = {
+type MusicCards = {
     title?: string;
     description?: string;
     cards?: {
@@ -14,7 +14,7 @@ type DiscographyCards = {
     }[];
 };
 
-export const DiscographyCards: FC<DiscographyCards> = ({
+export const MusicCards: FC<MusicCards> = ({
     cards,
     description,
     title,
@@ -39,18 +39,18 @@ export const DiscographyCards: FC<DiscographyCards> = ({
     });
 
     return (
-        <S.DiscographyCardsStyled>
+        <S.MusicCardsStyled>
             <Container>
                 {title && description && (
                     <FadeIn>
-                        <S.DiscographyCardsHeading>
+                        <S.MusicCardsHeading>
                             {description && <p>{description}</p>}
                             {title && <h2>{title}</h2>}
-                        </S.DiscographyCardsHeading>
+                        </S.MusicCardsHeading>
                     </FadeIn>
                 )}
-                <S.DiscographyCardsGrid>{cardsElements}</S.DiscographyCardsGrid>
+                <S.MusicCardsGrid>{cardsElements}</S.MusicCardsGrid>
             </Container>
-        </S.DiscographyCardsStyled>
+        </S.MusicCardsStyled>
     );
 };

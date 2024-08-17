@@ -125,3 +125,4 @@ export const PlayButton = styled.div`
 // todo: cont: ask chatGPT on conversation https://chatgpt.com/c/5115a22e-9804-4108-b9f2-9d6ff0a73573
 // 1) SlideNavLeft and SlideNavRight should be transparent when one of them is onSlideChange
 // 2) SlideNavLeft and SlideNavRight should be semi-transparent when isLeftDisabled OR isRightDisabled OR both are true.
+// 3) later: add play button

@@ -4,7 +4,7 @@ import { MediaQuery } from "@styles/mediaQuery";
 
 export const SocialsStyled = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: center; // not flex-end
     align-items: center;
     gap: 50px;
 

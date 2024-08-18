@@ -1,0 +1,34 @@
+---
+import { PianistSlider1 } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+import { Calendar as CalendarModule } from "@modules/Calendar";
+import { Pianist } from "@modules/Hero";
+import { Footer } from "@modules/Footer";
+---
+
+<!-- todo: add meta description for SEO -->
+
+<Layout
+    title="Wei-Ting Pianist | Calendar"
+    description="YOUR META DESCRIPTION FOR SEO"
+>
+    <main class="page-content">
+        <Pianist
+            pianistType="ParallaxImage"
+            client:load
+            data={{
+                image: PianistSlider1.src,
+                content: {
+                    title: "Calendar",
+                    paragraph:
+                        "What's next? Click on the event box!",
+                },
+            }}
+        />
+
+        <CalendarModule client:load />
+    </main>
+
+    <!-- the footer of calendar.astro's page: -->
+    <Footer />
+</Layout>

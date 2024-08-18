@@ -1,0 +1,44 @@
+---
+import { PianistSlider1, PianistSlider2 } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+import { Pianist } from "@modules/Hero";
+---
+
+<!-- the highest level of the page, the homepage. -->
+
+<!-- todo: language switching: FR/TW/EN/DE. -->
+
+<Layout
+    title="Wei-Ting Pianist | Homepage"
+    description="YOUR META DESCRIPTION FOR SEO"
+>
+    <main class="page-content">
+        <Pianist
+            client:load
+            pianistType="fullPageSlider"
+            data={[
+                {
+                    subtitle: "Pianist",
+                    title: "Wei-Ting HSIEH",
+                    background: PianistSlider1.src,
+                    paragraph:
+                        "",
+                    button: {
+                        text: "Wei-Ting",
+                        link: "/biography",
+                    },
+                },
+                {
+                    subtitle: "Pianist",
+                    title: "Wei-Ting HSIEH",
+                    background: PianistSlider2.src,
+                    paragraph: "Enjoy the music",
+                    button: {
+                        text: "Listen",
+                        link: "/music",
+                    },
+                },
+            ]}
+        />
+    </main>
+</Layout>

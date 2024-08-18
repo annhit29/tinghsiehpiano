@@ -1,0 +1,32 @@
+---
+import { PianistSlider4 } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+import { Contact as ContactModule } from "@modules/Contact";
+import { Pianist } from "@modules/Hero";
+import { Footer } from "@modules/Footer";
+---
+
+<!-- todo: add meta description for SEO -->
+
+<Layout
+    title="Wei-Ting Pianist | Contact"
+    description="YOUR META DESCRIPTION FOR SEO"
+>
+    <main class="page-content">
+        <Pianist
+            pianistType="ParallaxImage"
+            client:load
+            data={{
+                image: PianistSlider4.src,
+                content: {
+                    title: "Contact",
+                    paragraph:
+                        "Get in Touch!",
+                },
+            }}
+        />
+
+        <ContactModule client:load />
+    </main>
+    <Footer />
+</Layout>

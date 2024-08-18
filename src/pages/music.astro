@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Pianist } from "@modules/Hero";
+import { PianistSlider3, MusicPageImg1, MusicPageImg2 } from "@static/images";
+import { MusicCards } from "@modules/MusicCards";
+import { PianistVideoSlider } from "@modules/Hero/variants/PianistVideoSlider/PianistVideoSlider";
+import { Footer } from "@modules/Footer";
+---
+
+<Layout
+    title="Wei-Ting Pianist | Music"
+    description="YOUR META DESCRIPTION FOR SEO"
+>
+    <main class="page-content">
+        <Pianist
+            pianistType="ParallaxImage"
+            client:visible
+            data={{
+                image: PianistSlider3.src,
+                content: {
+                    title: "MUSIC",
+                    paragraph:
+                        "Enjoy the music of Wei-Ting HSIEH, a talented pianist.",
+                },
+            }}
+        />
+        <MusicCards
+            description="MUSIC"
+            title="Discography"
+            client:visible
+            cards={[
+                                {
+                    title: "Fantasiestücke, Robert Schumann",
+                    description:
+                        `
+                        <iframe style="border-radius:12px" 
+                            src="https://open.spotify.com/embed/artist/05P8KWbEcJD8NWTUbAfjpn?utm_source=generator&theme=0" 
+                            width="100%"
+                            height="352" 
+                            frameborder="0" 
+                            allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy">
+                        </iframe>
+                        `,
+                },
+            ]}
+        />
+        
+        <PianistVideoSlider
+            title="Videos"
+            client:visible
+            videoTitles={
+                [
+                "Wei-Ting HSIEH, J.Ph. Rameau: Le Rappel des Oiseaux",
+                "Wei-Ting HSIEH, second round, 18th Chopin Competition",
+                "Wei-Ting HSIEH, first round, 18th Chopin Competition"
+                ]
+            }
+            videos={[
+                "https://www.youtube.com/embed/I2pEK4Fznw4?si=HYTDUXpJYvseBja5",
+                "https://www.youtube.com/embed/orwTW279nEs?si=xwekzfO9vIfNG0Tf",
+                "https://www.youtube.com/embed/mm9pfniDt_E?si=-gWNbKLGfUUPvpLJ"
+            ]}
+        />
+
+        <!-- todo: might put images music-page-1.webp and music-page-2.webp (see static/images' index.tsx) in the music page later -->
+    </main>
+    <Footer />
+</Layout>

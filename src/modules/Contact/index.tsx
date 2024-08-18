@@ -8,7 +8,7 @@ export const Contact: FC = () => {
         <S.ContactStyled>
             <S.ContainerStyled>
                 <S.ContactBox>
-                    <FadeIn delay={0.1}>
+                    {/* <FadeIn delay={0.1}>
                         <TextBox
                             variant="background-text"
                             bgText="Phone"
@@ -22,7 +22,7 @@ export const Contact: FC = () => {
                                 just want to say hi
                             </p>
                         </TextBox>
-                    </FadeIn>
+                    </FadeIn> */}
                     <FadeIn delay={0.2}>
                         <TextBox
                             variant="background-text"
@@ -31,21 +31,29 @@ export const Contact: FC = () => {
                             href="mailto:youremail@gmail.com"
                             target="_blank"
                         >
-                            <h3>youremail@gmail.com</h3>
+                            <h3>ting61141@gmail.com</h3>
                             <p>
-                                also you can write me an email if you have any
-                                questions
+                                Write me an email if you have any questions
                             </p>
                         </TextBox>
                     </FadeIn>
-                </S.ContactBox>
-                <FadeIn delay={0.3}>
+                    <FadeIn delay={0.3}>
                     <TextBox variant="background-text" bgText="Address">
                         <h3>Address</h3>
-                        <p>Some street 123, 12345 City, Country</p>
-                        <p>Office: Mystr street 321, 54321 City, Country</p>
+                        
+                        {/* <p>Some street 123, 12345 City, Country</p> */}
+                        <p>Office: No. 134, Ho-ping East Rd., Sec. 2, Daan District, Taipei City 10671, Taiwan</p>
                     </TextBox>
-                </FadeIn>
+                    </FadeIn>
+                </S.ContactBox>
+                {/* <FadeIn delay={0.3}>
+                    <TextBox variant="background-text" bgText="Address">
+                        <h3>Address</h3>
+                        
+                        <p>Some street 123, 12345 City, Country</p>
+                        <p>Office: No. 134, Ho-ping East Rd., Sec. 2, Daan District, Taipei City 10671, Taiwan</p>
+                    </TextBox>
+                </FadeIn> */}
             </S.ContainerStyled>
         </S.ContactStyled>
     );

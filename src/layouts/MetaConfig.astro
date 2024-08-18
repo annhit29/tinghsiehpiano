@@ -1,5 +1,5 @@
 ---
-import { siteUrl } from "../../astro.config.mjs";
+import siteUrl from "../../astro.config.mjs";
 
 interface Props {
     title: string;
@@ -55,14 +55,14 @@ const metaData = {
 />
 
 <!-- default ones -->
-<meta property="url" content={metaData.default.url} />
+<meta property="url" content={metaData.default.url.toString()} />
 <meta property="type" content={metaData.default.type} />
 <meta property="title" content={metaData.default.title} />
 <meta property="description" content={metaData.default.description} />
 <meta property="image" content={metaData.default.image as string} />
 
 <!-- open graph ones -->
-<meta property="og:url" content={metaData.default.url} />
+<meta property="og:url" content={metaData.default.url.toString()} />
 <meta property="og:type" content={metaData.default.type} />
 <meta property="og:title" content={metaData.default.title} />
 <meta property="og:description" content={metaData.default.description} />
@@ -73,5 +73,5 @@ const metaData = {
 <meta name="twitter:title" content={metaData.twitter.title} />
 <meta name="twitter:description" content={metaData.twitter.description} />
 <meta name="twitter:image" content={metaData.twitter.image as string} />
-<meta property="twitter:domain" content={metaData.twitter.domain} />
-<meta property="twitter:url" content={metaData.twitter.url} />
+<meta property="twitter:domain" content={metaData.twitter.domain.toString()} />
+<meta property="twitter:url" content={metaData.twitter.url.toString()} />

@@ -1,0 +1,32 @@
+---
+import { PianistSlider2 } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+import { AboutMe as AboutMeModule } from "@modules/AboutMe";
+import { Pianist } from "@modules/Hero";
+import { Footer } from "@modules/Footer";
+---
+
+<!-- todo: add meta description for SEO -->
+
+<Layout
+    title="Wei-Ting Pianist | About Me"
+    description="YOUR META DESCRIPTION FOR SEO" 
+>
+    <main class="page-content">
+        <Pianist
+            pianistType="ParallaxImage"
+            client:load
+            data={{
+                image: PianistSlider2.src,
+                content: {
+                    title: "About",
+                    paragraph:
+                        "About Wei-Ting",
+                },
+            }}
+        />
+
+        <AboutMeModule client:load />
+    </main>
+    <Footer />
+</Layout>

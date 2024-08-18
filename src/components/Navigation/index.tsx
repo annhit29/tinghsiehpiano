@@ -25,7 +25,7 @@ export const Navigation: FC = () => {
                         <a href="/music">Music</a>
                     </li>
                     <li>
-                        <a href="/aboutMe">About me</a>
+                        <a href="/aboutme">About me</a>
                     </li>
                     <li>
                         <a href="/contact">Contact</a>

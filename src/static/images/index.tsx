@@ -4,7 +4,7 @@ import HeroImg from "./hero-img.webp";
 import Logo from "./logo.webp";
 
 import PianistSlider1 from "./homepage1.webp";
-import PianistSlider2 from "./hero-slider-02.webp";
+import PianistSlider2 from "./aboutme.webp";
 import PianistSlider3 from "./homepage2.webp";
 
 import InfiniteImg1 from "./infinite-img-1.webp";

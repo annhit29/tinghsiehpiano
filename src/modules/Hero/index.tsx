@@ -1,4 +1,4 @@
-import { type FC } from "react";
+import { type FC, type ReactNode } from "react";
 import * as S from "./styled";
 import { TextImage, type TextImageProps } from "./variants/TextImage/TextImage";
 import {
@@ -9,6 +9,7 @@ import {
     ParallaxImage,
     type ParallaxImageProps,
 } from "./variants/ParallaxImage/ParallaxImage";
+import type { JSX } from "react/jsx-runtime";
 
 // Pianist component is for index.astro which is the highest level component.
 
@@ -43,7 +44,7 @@ export const Pianist: FC<PianistProps> = ({ pianistType: pianistType, data, ...r
         return null;
     }
 
-    let PianistTypeOutput;
+    let PianistTypeOutput: string | number | boolean | JSX.Element | Iterable<ReactNode>;
     switch (pianistType) {
         case "textImage":
             PianistTypeOutput = (

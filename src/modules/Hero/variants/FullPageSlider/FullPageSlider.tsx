@@ -1,4 +1,5 @@
-import React, { type FC } from "react";
+// import React, { type FC } from "react";
+import { type FC } from "react";
 
 import * as S from "./styled";
 import { SwiperSlider } from "@components/SwiperSlider";

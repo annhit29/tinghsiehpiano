@@ -14,8 +14,9 @@ export const Contact: FC = () => {
                         <TextBox
                             variant="background-text"
                             bgText="Email"
-                            boxAsLink={true}
-                            href="mailto:youremail@gmail.com"
+                            boxAsLink={false}
+                            // boxAsLink={true}
+                            // href="mailto:youremail@gmail.com"
                             target="_blank"
                         >
                             <h3>ting61141@gmail.com</h3>

@@ -1,4 +1,5 @@
-import React, { type FC, useState, useEffect } from "react";
+// import React, { type FC, useState, useEffect } from "react";
+import { type FC } from "react";
 
 import * as S from "./styled";
 import type { ImageProps } from "@static/images";

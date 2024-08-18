@@ -56,6 +56,8 @@ Follow [Astro's official website: Install and set up Astro](https://docs.astro.b
 2. Swiper (for swiper/react, swiper/modules, and swiper/css): `npm install swiper`
 3. Emotion (for @emotion/styled and @emotion/react): `npm install @emotion/styled @emotion/react`
 4. @astrojs/react: `npx astro add react`, otherwise the problem of [No matching renderer found](https://docs.astro.build/en/reference/errors/no-matching-renderer/) will persist and the terminal will run the project. If the previous command to install @astrojs/react doesn't work, please read [this page](https://docs.astro.build/en/guides/integrations-guide/react/) to try to install manually.
+5. [vite-plugin-compression](https://www.npmjs.com/package/vite-plugin-compression): `npm i vite-plugin-compression`
+6. [@astrojs/sitemap](https://www.npmjs.com/package/@astrojs/sitemap): `npm i @astrojs/sitemap`
 
 ## 👀 Want to learn more?
 

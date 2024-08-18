@@ -1,4 +1,5 @@
-import React, { type FC, useState } from "react";
+// import React, { type FC, useState } from "react";
+import { type FC, useState } from "react";
 
 import * as S from "./styled";
 import { SwiperSlider } from "@components/SwiperSlider";
@@ -65,7 +66,7 @@ export const PianistVideoSlider: FC<PianistVideoSliderProps> = ({ title, videoTi
                                     height="484px" // 484px is the standard height for 560px width videos for the 16:9 aspect ratio
                                     src={videoUrl}
                                     title={`Video ${index + 1}`}
-                                    frameBorder="0"
+                                    // frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     referrerPolicy="strict-origin-when-cross-origin"
                                     allowFullScreen

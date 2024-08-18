@@ -6,15 +6,15 @@ import { Pagination, Navigation } from "swiper/modules";
 import { Icon } from "@static/icons";
 import { Container } from "@components/Container";
 
-// VideoSlider component is a slider that displays videos which uses SwiperSlider component to create the slider.
+// PianistVideoSlider component is a slider that displays videos which uses SwiperSlider component to create the slider.
 
-export type VideoSliderProps = {
+export type PianistVideoSliderProps = {
     title?: string; // Title of the video section
     videoTitles?: string[]; // Array of video titles
     videos: string[]; // Array of video URLs
 };
 
-export const VideoSlider: FC<VideoSliderProps> = ({ title, videoTitles, videos }) => {
+export const PianistVideoSlider: FC<PianistVideoSliderProps> = ({ title, videoTitles, videos }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     // Determine the state of the arrows
@@ -22,15 +22,15 @@ export const VideoSlider: FC<VideoSliderProps> = ({ title, videoTitles, videos }
     const isRightDisabled = currentSlide === videos.length - 1;
 
     return (
-        <S.VideoSliderStyled>
+        <S.PianistVideoSliderStyled>
                     <S.VideoCardsStyled>
 
-            <Container> {/* Wrap the entire VideoSlider content in a Container to have "Discography" and "Videos" title starting at the same x-position.*/}
+            <Container> {/* Wrap the entire PianistVideoSlider content in a Container to have "Discography" and "Videos" title starting at the same x-position.*/}
 
             {title && (
-                <S.VideoSliderHeading>
+                <S.PianistVideoSliderHeading>
                     <h2>{title}</h2>
-                </S.VideoSliderHeading>
+                </S.PianistVideoSliderHeading>
             )}
             <SwiperSlider
                 modules={[Pagination, Navigation]}
@@ -82,6 +82,6 @@ export const VideoSlider: FC<VideoSliderProps> = ({ title, videoTitles, videos }
             <div className="swiper-pagination"></div>
             </Container>
             </S.VideoCardsStyled>
-        </S.VideoSliderStyled>
+        </S.PianistVideoSliderStyled>
     );
 };

@@ -3,6 +3,8 @@ import styled from "@emotion/styled";
 import { Theme } from "@styles/colors";
 import { MediaQuery } from "@styles/mediaQuery";
 
+// ContactStyled is a styled component that contains the Contact section, for contact.astro .
+
 export const ContactStyled = styled.section`
     background: ${Theme.primary};
     padding-top: 90px;

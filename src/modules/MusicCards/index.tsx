@@ -5,6 +5,8 @@ import { TextBox } from "@components/textBox";
 import { Container } from "@components/Container";
 import { FadeIn } from "@utils/animations/FadeIn";
 
+// MusicCards component is for music.astro
+
 type MusicCards = {
     title?: string;
     description?: string;

@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { Pianist } from "@modules/Hero";
 import { PianistSlider3, InfiniteImg1, InfiniteImg2 } from "@static/images";
 import { MusicCards } from "@modules/MusicCards";
-import { VideoSlider } from "@modules/Hero/variants/VideoSlider/VideoSlider";
+import { PianistVideoSlider } from "@modules/Hero/variants/PianistVideoSlider/PianistVideoSlider";
 import { Footer } from "@modules/Footer";
 ---
 
@@ -47,7 +47,7 @@ import { Footer } from "@modules/Footer";
             ]}
         />
         
-        <VideoSlider
+        <PianistVideoSlider
             title="Videos"
             client:visible
             videoTitles={

@@ -3,6 +3,8 @@ import * as S from "./styled";
 import { TextBox } from "@components/textBox";
 import { FadeIn } from "@utils/animations/FadeIn";
 
+// Contact component is for contact.astro
+
 export const Contact: FC = () => {
     return (
         <S.ContactStyled>

@@ -12,7 +12,7 @@ export const VideoCardsStyled = styled.section`
     position: relative;
 `;
 
-export const VideoSliderHeading = styled.div`
+export const PianistVideoSliderHeading = styled.div`
     color: ${Theme.secondary};
     margin-bottom: 40px;
     max-width: 550px;
@@ -41,7 +41,7 @@ export const VideoTitle = styled.div`
     margin-bottom: 10px;
 `;
 
-export const VideoSliderStyled = styled.div`
+export const PianistVideoSliderStyled = styled.div`
     position: relative;
     width: 100%;
     height: auto;

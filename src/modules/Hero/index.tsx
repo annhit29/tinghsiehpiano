@@ -10,6 +10,8 @@ import {
     type ParallaxImageProps,
 } from "./variants/ParallaxImage/ParallaxImage";
 
+// Pianist component is for index.astro which is the highest level component.
+
 /**
  * to avoid passing wrong props to the component
  * we can use union type to define the props

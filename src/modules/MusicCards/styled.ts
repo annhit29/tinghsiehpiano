@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 import { Theme } from "@styles/colors";
 import { MediaQuery } from "@styles/mediaQuery";
 
+// MusicCardsStyled is a styled component that contains the MusicCards section, for music.astro .
+
 export const MusicCardsStyled = styled.section`
     background: ${Theme.primary};
     padding-top: 90px;

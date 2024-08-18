@@ -1,6 +1,6 @@
 // the highest level of the header component:
 
-import { Logo } from "@components/Logo";
+// import { Logo } from "@components/Logo";
 import * as S from "./styled";
 import { Navigation } from "@components/Navigation";
 import { useEffect, type FC } from "react";
@@ -30,8 +30,9 @@ export const Header: FC = () => {
     return (
         <S.HeaderStyled>
             <S.ContainerStyled>
-                <Logo />
+                {/* <Logo /> */}
                 <Navigation />
+                {/* todo: put language selection */}
             </S.ContainerStyled>
         </S.HeaderStyled>
     );

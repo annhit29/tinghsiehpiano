@@ -37,9 +37,11 @@ export const MusicCardsHeading = styled.div`
     }
 `;
 
+// the styled component MusicCardsGrid is for the discography cards:
 export const MusicCardsGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr); // 2 discography cards per row
+    // grid-template-columns: repeat(3, 1fr); // 3 discography cards per row
     gap: 40px;
 
     ${MediaQuery.max("lg")} {

@@ -29,7 +29,7 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -49,7 +49,7 @@ This is a project written in Typescript programming language, with the use of As
 - Astro: a web framework and a static site generator used for building static websites which supports multiple frontend frameworks. It renders static HTML with optional JavaScript for interactivity.
 
 ## Setup and configuration:
-Big up to [this video](https://youtu.be/F2pw1C9eKXw?si=S7RNW1xioEBhq2zQ&t=410) for setting up Astro. An alternative way is to follow [Astro's official website: Install and set up Astro](https://docs.astro.build/en/install-and-setup/).
+Follow [Astro's official website: Install and set up Astro](https://docs.astro.build/en/install-and-setup/).
 
 ## Install other dependencies for this project:
 1. React and React DOM: `npm install react react-dom`

@@ -1,7 +1,7 @@
 ---
-import { PianistSlider2 } from "@static/images";
+import { PianistSlider1 } from "@static/images";
 import Layout from "../layouts/Layout.astro";
-import { AboutMe as AboutMeModule } from "@modules/AboutMe";
+import { Calendar as CalendarModule } from "@modules/Calendar";
 import { Pianist } from "@modules/Hero";
 import { Footer } from "@modules/Footer";
 ---
@@ -9,24 +9,26 @@ import { Footer } from "@modules/Footer";
 <!-- todo: add meta description for SEO -->
 
 <Layout
-    title="Wei-Ting Pianist | About Me"
-    description="YOUR META DESCRIPTION FOR SEO" 
+    title="Wei-Ting Pianist | Calendar"
+    description="YOUR META DESCRIPTION FOR SEO"
 >
     <main class="page-content">
         <Pianist
             pianistType="ParallaxImage"
             client:load
             data={{
-                image: PianistSlider2.src,
+                image: PianistSlider1.src,
                 content: {
-                    title: "About",
+                    title: "Calendar",
                     paragraph:
-                        "About Wei-Ting",
+                        "What's next? Click on the event box!",
                 },
             }}
         />
 
-        <AboutMeModule client:load />
+        <CalendarModule client:load />
     </main>
+
+    <!-- the footer of calendar.astro's page: -->
     <Footer />
 </Layout>

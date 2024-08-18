@@ -30,7 +30,7 @@ export const HeaderStyled = styled.header`
 
 export const ContainerStyled = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: center; // center the things inside the header container //space-between;
     align-items: center;
     width: 100%;
     padding: 0 40px;

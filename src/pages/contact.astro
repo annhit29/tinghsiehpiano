@@ -1,10 +1,12 @@
 ---
-import { PianistSlider1 } from "@static/images";
+import { PianistSlider4 } from "@static/images";
 import Layout from "../layouts/Layout.astro";
 import { Contact as ContactModule } from "@modules/Contact";
 import { Pianist } from "@modules/Hero";
 import { Footer } from "@modules/Footer";
 ---
+
+<!-- todo: add meta description for SEO -->
 
 <Layout
     title="Wei-Ting Pianist | Contact"
@@ -15,7 +17,7 @@ import { Footer } from "@modules/Footer";
             pianistType="ParallaxImage"
             client:load
             data={{
-                image: PianistSlider1.src,
+                image: PianistSlider4.src,
                 content: {
                     title: "Contact",
                     paragraph:

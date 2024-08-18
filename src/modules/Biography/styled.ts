@@ -3,9 +3,9 @@ import styled from "@emotion/styled";
 import { Theme } from "@styles/colors";
 import { MediaQuery } from "@styles/mediaQuery";
 
-// ContactStyled is a styled component that contains the Contact section, for contact.astro .
+// BiographyStyled is a styled component that contains the Biography section, for biography.astro .
 
-export const ContactStyled = styled.section`
+export const BiographyStyled = styled.section`
     background: ${Theme.primary};
     padding-top: 90px;
     border-top-left-radius: 50px;
@@ -15,12 +15,12 @@ export const ContactStyled = styled.section`
     position: relative;
 `;
 
-export const ContactStyledWrapper = styled.div`
+export const BiographyStyledWrapper = styled.div`
     max-width: 920px;
     margin: 0 auto;
 `;
 
-export const ContactTitle = styled.h2`
+export const BiographyTitle = styled.h2`
     &,
     &:last-child {
         margin-bottom: 90px;
@@ -33,7 +33,7 @@ export const ContainerStyled = styled(Container)`
     }
 `;
 
-export const ContactBox = styled.div`
+export const BiographyBox = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;

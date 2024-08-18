@@ -3,13 +3,13 @@ import * as S from "./styled";
 import { TextBox } from "@components/textBox";
 import { FadeIn } from "@utils/animations/FadeIn";
 
-// AboutMe component is for aboutme.astro
+// Biography component is for biography.astro
 
-export const AboutMe: FC = () => {
+export const Biography: FC = () => {
     return (
-        <S.ContactStyled>
+        <S.BiographyStyled>
             <S.ContainerStyled>
-                <FadeIn delay={0.3}>
+                <FadeIn> {/* FadeIn 0 seconds by default (see its source code) */}
                     <TextBox variant="background-text" bgText="Address">
                         <h3>I am a Taiwanese pianist.</h3>
                         
@@ -19,6 +19,6 @@ export const AboutMe: FC = () => {
                     </TextBox>
                 </FadeIn>
             </S.ContainerStyled>
-        </S.ContactStyled>
+        </S.BiographyStyled>
     );
 };

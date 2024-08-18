@@ -13,19 +13,22 @@ export const Navigation: FC = () => {
                     <li>
                         <a href="/">Home</a>
                     </li>
-                    <li>
+                    {/* <li>
                         <a
                             href="https://www.instagram.com/ting61141/"
                             target="_blank"
                         >
                             Social Media
                         </a>
+                    </li> */}
+                    <li>
+                        <a href="/calendar">Calendar</a>
                     </li>
                     <li>
                         <a href="/music">Music</a>
                     </li>
                     <li>
-                        <a href="/aboutme">About me</a>
+                        <a href="/biography">Biography</a>
                     </li>
                     <li>
                         <a href="/contact">Contact</a>

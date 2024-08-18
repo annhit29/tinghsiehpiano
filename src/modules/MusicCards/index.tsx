@@ -29,7 +29,8 @@ export const MusicCards: FC<MusicCards> = ({
 
     const cardsElements = cards.map((card, index) => {
         return (
-            <FadeIn key={index}>
+            <FadeIn> {/* FadeIn 0 seconds by default (see its source code) */}
+            {/*<FadeIn key={index}>*/}
                 <TextBox>
                     <h3>{card.title}</h3>
                     {/* Use dangerouslySetInnerHTML to be able to render HTML content as well: */}

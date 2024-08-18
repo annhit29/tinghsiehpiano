@@ -1,18 +1,19 @@
 import { type FC } from "react";
-import PreviewPng from "./preview.webp";
-import HeroImg from "./hero-img.webp";
+import PreviewPng from "./preview-homepage1.webp";
+import PianistImg from "./pianist-img.webp";
 import Logo from "./logo.webp";
 
 import PianistSlider1 from "./homepage1.webp";
-import PianistSlider2 from "./aboutme.webp";
-import PianistSlider3 from "./homepage2.webp";
+import PianistSlider2 from "./homepage2.webp";
+import PianistSlider3 from "./aboutme.webp";
+import PianistSlider4 from "./contact.webp";
 
-import InfiniteImg1 from "./infinite-img-1.webp";
-import InfiniteImg2 from "./infinite-img-2.webp";
+import MusicPageImg1 from "./music-page-1.webp"; // todo: might put this image in the music page later
+import MusicPageImg2 from "./music-page-2.webp"; // todo: might put this image in the music page later
 
 export const images = {
     preview: PreviewPng,
-    heroImg: HeroImg,
+    pianistImg: PianistImg,
     logo: Logo,
 };
 
@@ -68,6 +69,8 @@ export {
     PianistSlider1 as PianistSlider1,
     PianistSlider2 as PianistSlider2,
     PianistSlider3 as PianistSlider3,
-    InfiniteImg1,
-    InfiniteImg2,
+    PianistSlider4 as PianistSlider4,
+    
+    MusicPageImg1,
+    MusicPageImg2,
 };

@@ -51,8 +51,9 @@ export const Calendar: FC = () => {
                         <TextBox
                             variant="background-text"
                             bgText="Schedule3"
-                            boxAsLink={true}
-                            href=""
+                            boxAsLink={false}
+                            // boxAsLink={true}
+                            // href=""
                             target="_blank"
                         >
                         <S.ScheduleHeader1>
@@ -69,8 +70,9 @@ export const Calendar: FC = () => {
                         <TextBox
                             variant="background-text"
                             bgText="Schedule4"
-                            boxAsLink={true}
-                            href=""
+                            boxAsLink={false}
+                            // boxAsLink={true}
+                            // href=""
                             target="_blank"
                         >
                         <S.ScheduleHeader1>

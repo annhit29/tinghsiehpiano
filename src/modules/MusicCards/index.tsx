@@ -1,4 +1,5 @@
-import React, { type FC } from "react";
+// import React, { type FC } from "react";
+import { type FC } from "react";
 
 import * as S from "./styled";
 import { TextBox } from "@components/textBox";
@@ -27,8 +28,9 @@ export const MusicCards: FC<MusicCards> = ({
         return null;
     }
 
-    const cardsElements = cards.map((card, index) => {
-        return (
+    // const cardsElements = cards.map((card, index) => {
+        const cardsElements = cards.map((card) => {
+    return (
             <FadeIn> {/* FadeIn 0 seconds by default (see its source code) */}
             {/*<FadeIn key={index}>*/}
                 <TextBox>

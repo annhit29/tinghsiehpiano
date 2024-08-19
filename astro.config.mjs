@@ -1,17 +1,76 @@
-import { defineConfig } from 'astro/config';
+// import { defineConfig } from 'astro/config';
 
+// import react from "@astrojs/react";
+
+// // Define the site URL
+// // export const siteUrl = 'https://wtinghsiehpiano.com'; 
+
+// // Set siteUrl dynamically based on environment
+// const isProduction = process.env.NODE_ENV === 'production';
+// const siteUrl = isProduction ? 'https://wtinghsiehpiano.com' : process.env.URL || 'http://localhost:4321/';
+
+// console.log('siteUrl:', siteUrl);
+
+// export { siteUrl };
+
+// // https://astro.build/config
+// export default defineConfig({
+//   integrations: [react()]
+// });
+
+import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
-
-// Define the site URL
-// export const siteUrl = 'https://wtinghsiehpiano.com'; 
+import CompressionPlugin from "vite-plugin-compression";
+import sitemap from "@astrojs/sitemap";
 
 // Set siteUrl dynamically based on environment
 const isProduction = process.env.NODE_ENV === 'production';
 const siteUrl = isProduction ? 'https://wtinghsiehpiano.com' : process.env.URL || 'http://localhost:4321/';
 
+console.log('siteUrl:', siteUrl);
+
 export { siteUrl };
 
+const date = new Date().toISOString();
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react()]
+    site: siteUrl + "/",
+
+    integrations: [
+        react(),
+        sitemap({
+            serialize(item) {
+                // Default values for pages
+                item.priority = siteUrl + "/" === item.url ? 1.0 : 0.9;
+                item.changefreq = "weekly";
+                item.lastmod = date;
+
+                // if you want to exclude a page from the sitemap, do it here
+                // if (/exclude-from-sitemap/.test(item.url)) {
+                //     return undefined;
+                // }
+
+                // if any page needs a different priority, changefreq, or lastmod, uncomment the following lines and adjust as needed
+                // if (/test-sitemap/.test(item.url)) {
+                //     item.changefreq = "daily";
+                //     item.lastmod = date;
+                //     item.priority = 0.9;
+                // }
+
+                // if you want to change priority of all subpages like "/posts/*", you can use:
+                // if (/\/posts\//.test(item.url)) {
+                //     item.priority = 0.7;
+                // }
+                return item;
+            },
+        }),
+    ],
+    renderers: ["@astrojs/renderer-react"],
+    prerender: true,
+    vite: {
+        plugins: [CompressionPlugin()],
+    },
+    buildOptions: {
+        minify: true,
+    },
 });

@@ -7,7 +7,7 @@ interface Props {
     preview: string;
 }
 
-const { title, description, preview } = Astro.props;
+const { title = 'Default Title', description = 'Default Description', preview = '/default-preview.png' } = Astro.props;
 
 /**
  * keep whole metadata in one place
@@ -22,15 +22,17 @@ const metaData = {
         description: description,
         image: preview,
     },
-    twitter: {
-        card: "summary_large_image",
-        title: title,
-        description: description,
-        image: preview,
-        domain: siteUrl,
-        url: siteUrl,
-    },
+    // twitter: {
+    //     card: "summary_large_image",
+    //     title: title,
+    //     description: description,
+    //     image: preview,
+    //     domain: siteUrl,
+    //     url: siteUrl,
+    // },
 };
+console.log('MetaConfig props:', { siteUrl, title, description, preview });
+
 ---
 
 <meta charset="UTF-8" />
@@ -68,10 +70,10 @@ const metaData = {
 <meta property="og:description" content={metaData.default.description} />
 <meta property="og:image" content={metaData.default.image as string} />
 
-<!-- twitter ones -->
+<!-- twitter ones
 <meta name="twitter:card" content={metaData.twitter.card} />
 <meta name="twitter:title" content={metaData.twitter.title} />
 <meta name="twitter:description" content={metaData.twitter.description} />
 <meta name="twitter:image" content={metaData.twitter.image as string} />
 <meta property="twitter:domain" content={metaData.twitter.domain} />
-<meta property="twitter:url" content={metaData.twitter.url} />
+<meta property="twitter:url" content={metaData.twitter.url} /> -->

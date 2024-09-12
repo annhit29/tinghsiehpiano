@@ -59,6 +59,9 @@ Follow [Astro's official website: Install and set up Astro](https://docs.astro.b
 5. [vite-plugin-compression](https://www.npmjs.com/package/vite-plugin-compression): `npm i vite-plugin-compression`
 6. [@astrojs/sitemap](https://www.npmjs.com/package/@astrojs/sitemap): `npm i @astrojs/sitemap`
 
+## Translation:
+Translate all the astro pages (i.e. all the astro files under the folder `pages`).
+
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

@@ -1,29 +1,10 @@
-// import { defineConfig } from 'astro/config';
-
-// import react from "@astrojs/react";
-
-// // Define the site URL
-// // export const siteUrl = 'https://wtinghsiehpiano.com'; 
-
-// // Set siteUrl dynamically based on environment
-// const isProduction = process.env.NODE_ENV === 'production';
-// const siteUrl = isProduction ? 'https://wtinghsiehpiano.com' : process.env.URL || 'http://localhost:4321/';
-
-// console.log('siteUrl:', siteUrl);
-
-// export { siteUrl };
-
-// // https://astro.build/config
-// export default defineConfig({
-//   integrations: [react()]
-// });
-
 import { defineConfig } from "astro/config";
+import astroI18next from "astro-i18next";
 import react from "@astrojs/react";
 import CompressionPlugin from "vite-plugin-compression";
 import sitemap from "@astrojs/sitemap";
 
-// Set siteUrl dynamically based on environment
+// Set siteUrl dynamically based on environment variables:
 const isProduction = process.env.NODE_ENV === 'production';
 const siteUrl = isProduction ? 'https://wtinghsiehpiano.com' : process.env.URL || 'http://localhost:4321/';
 
@@ -34,10 +15,12 @@ export { siteUrl };
 const date = new Date().toISOString();
 // https://astro.build/config
 export default defineConfig({
-    site: siteUrl + "/",
+    site: siteUrl + "/", // the URL of my website
 
+    // added integrations:
     integrations: [
-        react(),
+        astroI18next(), // i18next integration
+        react(), // React integration
         sitemap({
             serialize(item) {
                 // Default values for pages
@@ -63,7 +46,7 @@ export default defineConfig({
                 // }
                 return item;
             },
-        }),
+        }), // Sitemap integration
     ],
     renderers: ["@astrojs/renderer-react"],
     prerender: true,

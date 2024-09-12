@@ -1,0 +1,36 @@
+{
+    "site": {
+      "title": "Wei-Ting Pianist | Accueil",
+      "description": "VOTRE MÉTA DESCRIPTION POUR LE RÉFÉRENCEMENT"
+    },
+
+    "music":{
+      "site": {
+        "title": "Wei-Ting Pianist | Musique",
+        "description": "YOUR META DESCRIPTION FOR SEO"
+      },
+      "page-content": {
+        "title": "Musique",
+        "paragraph": "Profitez de la musique de Wei-Ting HSIEH, une pianiste talentueuse."
+      },
+      "music-card":{
+        "description": "Musique",
+        "title": "Discographie"
+      },
+      "pianovideoslider": {
+        "title": "Vidéos",
+        "videoTitles": {
+          "first-round": "premier tour",
+          "second-round": "deuxième tour"
+        }
+      }
+    },
+    
+    "pianist": {
+      "subtitle": "Pianiste",
+      "paragraph": "Profitez de la musique"
+    },
+    "buttons": {
+      "listen": "Écouter"
+    }
+}

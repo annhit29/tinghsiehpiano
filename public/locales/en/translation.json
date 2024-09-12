@@ -1,0 +1,36 @@
+{
+    "site": {
+      "title": "Wei-Ting Pianist | Homepage",
+      "description": "YOUR META DESCRIPTION FOR SEO"
+    },
+
+    "music":{
+      "site": {
+        "title": "Wei-Ting Pianist | Music",
+        "description": "YOUR META DESCRIPTION FOR SEO"
+      },
+      "page-content": {
+        "title": "Music",
+        "paragraph": "Enjoy the music of Wei-Ting HSIEH, a talented pianist."
+      },
+      "music-card":{
+        "description": "Music",
+        "title": "Discography"
+      },
+      "pianovideoslider": {
+        "title": "Videos",
+        "videoTitles": {
+          "first-round": "first round",
+          "second-round": "second round"
+        }
+      }
+    },
+    
+    "pianist": {
+      "subtitle": "Pianist",
+      "paragraph": "Enjoy the music"
+    },
+    "buttons": {
+      "listen": "Listen"
+    }
+}

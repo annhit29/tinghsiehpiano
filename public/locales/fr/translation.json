@@ -3,11 +3,27 @@
       "title": "Wei-Ting Pianist | Accueil",
       "description": "VOTRE MÉTA DESCRIPTION POUR LE RÉFÉRENCEMENT"
     },
+    "pianist": {
+      "subtitle": "Pianiste",
+      "paragraph": "Profitez de la musique"
+    },
+    "buttons": {
+      "listen": "Écouter"
+    },
+
+    "contact": {
+      "site": {
+        "description": "VOTRE MÉTA DESCRIPTION POUR LE RÉFÉRENCEMENT"
+      },
+      "page-content": {
+        "paragraph": "Entrer en Contact!"
+      }
+    },
 
     "music":{
       "site": {
         "title": "Wei-Ting Pianist | Musique",
-        "description": "YOUR META DESCRIPTION FOR SEO"
+        "description": "VOTRE MÉTA DESCRIPTION POUR LE RÉFÉRENCEMENT"
       },
       "page-content": {
         "title": "Musique",
@@ -24,13 +40,5 @@
           "second-round": "deuxième tour"
         }
       }
-    },
-    
-    "pianist": {
-      "subtitle": "Pianiste",
-      "paragraph": "Profitez de la musique"
-    },
-    "buttons": {
-      "listen": "Écouter"
     }
 }

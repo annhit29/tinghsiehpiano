@@ -3,6 +3,23 @@
       "title": "Wei-Ting Pianist | Homepage",
       "description": "YOUR META DESCRIPTION FOR SEO"
     },
+    "pianist": {
+      "subtitle": "Pianist",
+      "paragraph": "Enjoy the music"
+    },
+    "buttons": {
+      "listen": "Listen"
+    },
+
+    "contact": {
+      "site": {
+        "description": "YOUR META DESCRIPTION FOR SEO"
+      },
+      "page-content": {
+        "paragraph": "Get in Touch!"
+      }
+
+    },
 
     "music":{
       "site": {
@@ -24,13 +41,5 @@
           "second-round": "second round"
         }
       }
-    },
-    
-    "pianist": {
-      "subtitle": "Pianist",
-      "paragraph": "Enjoy the music"
-    },
-    "buttons": {
-      "listen": "Listen"
     }
 }

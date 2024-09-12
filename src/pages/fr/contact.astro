@@ -1,10 +1,11 @@
 ---
-import { changeLanguage } from "i18next";
 import { PianistSlider4 } from "@static/images";
 import Layout from "../../layouts/Layout.astro";
 import { Contact as ContactModule } from "@modules/Contact";
 import { Pianist } from "@modules/Hero";
 import { Footer } from "@modules/Footer";
+import { T } from "../../../dist/_astro/index.UPYt4ex2";
+import i18next, { t, changeLanguage } from "i18next"; // Import i18next for translations
 
 changeLanguage("fr");
 ---
@@ -13,7 +14,7 @@ changeLanguage("fr");
 
 <Layout
     title="Wei-Ting Pianist | Contact"
-    description="YOUR META DESCRIPTION FOR SEO"
+    description={t("contact.description")}
 >
     <main class="page-content">
         <Pianist
@@ -23,8 +24,7 @@ changeLanguage("fr");
                 image: PianistSlider4.src,
                 content: {
                     title: "Contact",
-                    paragraph:
-                        "Get in Touch!",
+                    paragraph: t("contact.page-content.paragraph"),
                 },
             }}
         />

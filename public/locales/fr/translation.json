@@ -11,6 +11,37 @@
       "listen": "Écouter"
     },
 
+    "errorpage": {
+      "title": "404 | Page non trouvée",
+      "paragraph": "La page que vous recherchez a peut-être été supprimée, a changé de nom ou est temporairement indisponible.",
+      "fadeIn": {
+        "h1": "Oups - Désolée ! 404",
+        "paragraph": "La page que vous recherchez a peut-être été supprimée, a changé de nom ou est temporairement indisponible."
+      }
+    },
+
+    "biography": {
+      "site": {
+        "title": "Wei-Ting Pianist | Biographie",
+        "description": "VOTRE MÉTA DESCRIPTION POUR LE RÉFÉRENCEMENT"
+      },
+      "page-content": {
+        "title": "Biographie",
+        "paragraph": "À propos de Wei-Ting"
+      }
+    },
+
+    "calendar": {
+      "site": {
+        "title": "Wei-Ting Pianist | Calendrier",
+        "description": "VOTRE MÉTA DESCRIPTION POUR LE RÉFÉRENCEMENT"
+      },
+      "page-content": {
+        "title": "Calendrier",
+        "paragraph": "Consultez les prochaines performances de Wei-Ting HSIEH."
+      }
+    },
+
     "contact": {
       "site": {
         "description": "VOTRE MÉTA DESCRIPTION POUR LE RÉFÉRENCEMENT"

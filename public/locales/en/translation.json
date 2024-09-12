@@ -11,6 +11,37 @@
       "listen": "Listen"
     },
 
+    "errorpage": {
+      "title": "404 | Page not found",
+      "paragraph": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+      "fadeIn": {
+        "h1": "Wooops - Soory! 404",
+        "paragraph": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+      }
+    },
+
+    "biography": {
+      "site": {
+        "title": "Wei-Ting Pianist | Biography",
+        "description": "YOUR META DESCRIPTION FOR SEO"
+      },
+      "page-content": {
+        "title": "Biography",
+        "paragraph": "About Wei-Ting"
+      }
+    },
+
+    "calendar": {
+      "site": {
+        "title": "Wei-Ting Pianist | Calendar",
+        "description": "YOUR META DESCRIPTION FOR SEO"
+      },
+      "page-content": {
+        "title": "Calendar",
+        "paragraph": "Check out Wei-Ting HSIEH's upcoming performances."
+      }
+    },
+
     "contact": {
       "site": {
         "description": "YOUR META DESCRIPTION FOR SEO"

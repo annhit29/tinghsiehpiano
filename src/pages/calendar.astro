@@ -1,5 +1,5 @@
 ---
-import { changeLanguage } from "i18next";
+import { t, changeLanguage } from "i18next";
 import { PianistSlider1 } from "@static/images";
 import Layout from "../layouts/Layout.astro";
 import { Calendar as CalendarModule } from "@modules/Calendar";
@@ -12,8 +12,8 @@ changeLanguage("en");
 <!-- todo: add meta description for SEO -->
 
 <Layout
-    title="Wei-Ting Pianist | Calendar"
-    description="YOUR META DESCRIPTION FOR SEO"
+    title={t("calendar.site.title")}
+    description={t("calendar.site.description")}
 >
     <main class="page-content">
         <Pianist
@@ -22,9 +22,10 @@ changeLanguage("en");
             data={{
                 image: PianistSlider1.src,
                 content: {
-                    title: "Calendar",
+                    title: t("calendar.page-content.title"),
                     paragraph:
-                        "What's next? Click on the event box!",
+                        t("calendar.page-content.paragraph"),
+                        // "What's next? Click on the event box!",
                 },
             }}
         />

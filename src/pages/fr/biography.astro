@@ -1,10 +1,11 @@
 ---
-import { changeLanguage } from "i18next";
+import { t, changeLanguage } from "i18next";
 import { PianistSlider2 } from "@static/images";
 import Layout from "../../layouts/Layout.astro";
 import { Biography as BiographyModule } from "@modules/Biography";
 import { Pianist } from "@modules/Hero";
 import { Footer } from "@modules/Footer";
+import { T } from "../../../dist/_astro/index.UPYt4ex2";
 
 changeLanguage("fr");
 ---
@@ -12,8 +13,8 @@ changeLanguage("fr");
 <!-- todo: add meta description for SEO -->
 
 <Layout
-    title="Wei-Ting Pianist | Biography"
-    description="YOUR META DESCRIPTION FOR SEO" 
+    title={t("biography.site.title")}
+    description={t("biography.site.description")}
 >
     <main class="page-content">
         <Pianist
@@ -22,9 +23,8 @@ changeLanguage("fr");
             data={{
                 image: PianistSlider2.src,
                 content: {
-                    title: "Biography",
-                    paragraph:
-                        "About Wei-Ting",
+                    title: t("biography.page-content.title"),
+                    paragraph: t("biography.page-content.paragraph"),
                 },
             }}
         />

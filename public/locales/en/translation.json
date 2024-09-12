@@ -17,8 +17,13 @@
       },
       "page-content": {
         "paragraph": "Get in Touch!"
+      },
+      "index": {
+        "address": {
+          "title": "Address",
+          "paragraph": "Office: No. 134, Ho-ping East Rd., Sec. 2, Daan District, Taipei City 10671, Taiwan"
+        }
       }
-
     },
 
     "music":{

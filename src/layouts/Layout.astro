@@ -28,6 +28,8 @@ const { title, description, overwritePreview } = Astro.props;
             preview={overwritePreview ? overwritePreview : PreviewPng.src}
         />
         <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href="https://www.tinghsiehpiano.me/" />
         <Global styles={NormalizeCSS} />
 
         <script>

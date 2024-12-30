@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 
 // Set siteUrl dynamically based on environment variables:
 const isProduction = process.env.NODE_ENV === 'production';
-const siteUrl = isProduction ? 'https://wtinghsiehpiano.com' : process.env.URL || 'http://localhost:4321/';
+const siteUrl = isProduction ? 'https://www.tinghsiehpiano.me' : process.env.URL || 'http://localhost:4321/';
 
 console.log('siteUrl:', siteUrl);
 

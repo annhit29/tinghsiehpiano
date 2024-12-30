@@ -15,7 +15,8 @@ export { siteUrl };
 const date = new Date().toISOString();
 // https://astro.build/config
 export default defineConfig({
-    site: siteUrl, //+ "/", // the URL of my website
+    site: 'https://www.tinghsiehpiano.me', //siteUrl, //+ "/", // the URL of my website
+    trailingSlash: 'never',  // This ensures all URLs don't have a trailing slash
 
     // added integrations:
     integrations: [
@@ -56,5 +57,4 @@ export default defineConfig({
     buildOptions: {
         minify: true,
     },
-    trailingSlash: 'never',  // This ensures all URLs don't have a trailing slash
 });

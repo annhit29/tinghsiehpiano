@@ -15,7 +15,7 @@ export { siteUrl };
 const date = new Date().toISOString();
 // https://astro.build/config
 export default defineConfig({
-    site: siteUrl, //+ "/", // the URL of my website
+    site: siteUrl + "/", // the URL of my website
 
     // added integrations:
     integrations: [
@@ -24,7 +24,7 @@ export default defineConfig({
         sitemap({
             serialize(item) {
                 // Default values for pages
-                item.priority = siteUrl === item.url ? 1.0 : 0.9; //+ "/"
+                item.priority = siteUrl + "/" === item.url ? 1.0 : 0.9;
                 item.changefreq = "weekly";
                 item.lastmod = date;
 
@@ -55,5 +55,6 @@ export default defineConfig({
     },
     buildOptions: {
         minify: true,
+        trailingSlash: 'always',  // This ensures all URLs have a trailing slash
     },
 });

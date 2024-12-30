@@ -62,6 +62,10 @@ Follow [Astro's official website: Install and set up Astro](https://docs.astro.b
 ## Translation:
 Translate all the astro pages (i.e. all the astro files under the folder `pages`).
 
+A tsx file can't contain an astro file; an astro file can contain a tsx file.
+npm install react-i18next i18next i18next-browser-languagedetector@3.0.0 --save
+https://react.i18next.com/getting-started and https://www.npmjs.com/package/i18next-browser-languagedetector/v/3.0.0
+if there are vulnerabilities: follow the terminal's instructions.
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

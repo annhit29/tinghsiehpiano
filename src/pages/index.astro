@@ -2,16 +2,15 @@
 import { PianistSlider1, PianistSlider2 } from "@static/images";
 import Layout from "../layouts/Layout.astro";
 import { Pianist } from "@modules/Hero";
-import i18next, { t, changeLanguage } from "i18next"; // Import i18next for translations
-
-changeLanguage("en");
 ---
 
-<!-- the highest level of the page, the landing page which is also the homepage in this website. -->
+<!-- the highest level of the page, the homepage. -->
+
+<!-- todo: language switching: FR/TW/EN/DE. -->
 
 <Layout
-    title={t("site.title")}
-    description={t("site.description")}
+    title="Wei-Ting Pianist | Homepage"
+    description="YOUR META DESCRIPTION FOR SEO"
 >
     <main class="page-content">
         <Pianist
@@ -19,7 +18,7 @@ changeLanguage("en");
             pianistType="fullPageSlider"
             data={[
                 {
-                    subtitle: t("pianist.subtitle"),
+                    subtitle: "Pianist",
                     title: "Wei-Ting HSIEH",
                     background: PianistSlider1.src,
                     // paragraph:
@@ -30,12 +29,12 @@ changeLanguage("en");
                     },
                 },
                 {
-                    subtitle: t("pianist.subtitle"),
+                    subtitle: "Pianist",
                     title: "Wei-Ting HSIEH",
                     background: PianistSlider2.src,
-                    paragraph: t("pianist.paragraph"),
+                    paragraph: "Enjoy the music",
                     button: {
-                        text: t("buttons.listen"),
+                        text: "Listen",
                         link: "/music",
                     },
                 },

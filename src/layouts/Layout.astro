@@ -4,13 +4,11 @@ import { Global } from "@emotion/react";
 import { PreviewPng } from "@static/images";
 import { Header } from "@modules/Header";
 import MetaConfig from "./MetaConfig.astro";
-import i18next, { t } from "i18next"; // Import i18next for translations
-import { HeadHrefLangs } from "astro-i18next/components";
 
-interface Props { // the props for the layout
-    title: string; // the title of the website
-    description: string; // the description of the website
-    overwritePreview?: string; // the preview image of the website landing page
+interface Props {
+    title: string;
+    description: string;
+    overwritePreview?: string;
 }
 
 const { title, description, overwritePreview } = Astro.props;
@@ -22,17 +20,15 @@ const { title, description, overwritePreview } = Astro.props;
     It also includes the MetaConfig component to set the metadata for the page.
 -->
 <!doctype html>
-<html lang={i18next.language}> <!-- dynamic language translation -->
+<html lang="en"> <!-- todo: change to dynamic language -->
     <head>
         <MetaConfig
-        title={t(title)}
-        description={t(description)}
-        preview={overwritePreview ? overwritePreview : PreviewPng.src}
+            title={title}
+            description={description}
+            preview={overwritePreview ? overwritePreview : PreviewPng.src}
         />
-        <title>{t(title)}</title>
+        <title>{title}</title>
         <Global styles={NormalizeCSS} />
-
-        <HeadHrefLangs /> <!-- it adds hreflang tags for SEO -->
 
         <script>
             /**

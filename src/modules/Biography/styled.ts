@@ -43,3 +43,11 @@ export const BiographyBox = styled.div`
         grid-template-columns: 1fr;
     }
 `;
+
+export const BiographyParagraph = styled.p`
+    line-height: 24px !important; /* Adjust for line spacing within the paragraph, and force this line-height to apply.*/
+    margin-bottom: 20px; /* Adjust for spacing between paragraphs */
+    &:last-child {
+        margin-bottom: 0; /* Ensure no extra margin on the last paragraph */
+    }
+`;

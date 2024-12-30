@@ -6,15 +6,11 @@ import { PianistSlider3 } from "@static/images";
 import { MusicCards } from "@modules/MusicCards";
 import { PianistVideoSlider } from "@modules/Hero/variants/PianistVideoSlider/PianistVideoSlider";
 import { Footer } from "@modules/Footer";
-import { Trans } from "astro-i18next/components"; // Import Trans component
-import i18next, { t, changeLanguage } from "i18next"; // Import i18next for translations
-
-changeLanguage("en");
 ---
 
 <Layout
-    title={t("music.site.title")}
-    description={t("music.site.description")}
+    title="Wei-Ting Pianist | Music"
+    description="YOUR META DESCRIPTION FOR SEO"
 >
     <main class="page-content">
         <Pianist
@@ -23,15 +19,15 @@ changeLanguage("en");
             data={{
                 image: PianistSlider3.src,
                 content: {
-                    title: t("music.page-content.title"),
+                    title: "MUSIC",
                     paragraph:
-                        t("music.page-content.paragraph"),
+                        "Enjoy the music of Wei-Ting HSIEH, a talented pianist.",
                 },
             }}
         />
         <MusicCards
-            description={t("music.music-card.description")}
-            title={t("music.music-card.title")}
+            description="MUSIC"
+            title="Discography"
             client:visible
             cards={[
                                 {
@@ -53,13 +49,13 @@ changeLanguage("en");
         />
         
         <PianistVideoSlider
-            title={t("music.pianovideoslider.title")}
+            title="Videos"
             client:visible
             videoTitles={
                 [
                 "Wei-Ting HSIEH, J.Ph. Rameau: Le Rappel des Oiseaux",
-                "Wei-Ting HSIEH, " + t("music.pianovideoslider.videoTitles.second-round") + ", 18th Chopin Competition",
-                "Wei-Ting HSIEH, " + t("music.pianovideoslider.videoTitles.first-round") + ", 18th Chopin Competition"
+                "Wei-Ting HSIEH, second round, 18th Chopin Competition",
+                "Wei-Ting HSIEH, first round, 18th Chopin Competition"
                 ]
             }
             videos={[

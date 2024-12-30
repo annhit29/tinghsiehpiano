@@ -4,17 +4,13 @@ import Layout from "../layouts/Layout.astro";
 import { Contact as ContactModule } from "@modules/Contact";
 import { Pianist } from "@modules/Hero";
 import { Footer } from "@modules/Footer";
-import { T } from "../../dist/_astro/index.UPYt4ex2";
-import i18next, { t, changeLanguage } from "i18next"; // Import i18next for translations
-
-changeLanguage("en");
 ---
 
 <!-- todo: add meta description for SEO -->
 
 <Layout
     title="Wei-Ting Pianist | Contact"
-    description={t("contact.description")}
+    description="YOUR META DESCRIPTION FOR SEO"
 >
     <main class="page-content">
         <Pianist
@@ -24,7 +20,8 @@ changeLanguage("en");
                 image: PianistSlider4.src,
                 content: {
                     title: "Contact",
-                    paragraph: t("contact.page-content.paragraph"),
+                    paragraph:
+                        "Get in Touch!",
                 },
             }}
         />

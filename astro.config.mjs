@@ -55,6 +55,6 @@ export default defineConfig({
     },
     buildOptions: {
         minify: true,
-        trailingSlash: 'never',  // This ensures all URLs don't have a trailing slash
     },
+    trailingSlash: 'never',  // This ensures all URLs don't have a trailing slash
 });

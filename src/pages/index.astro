@@ -9,7 +9,7 @@ import { Pianist } from "@modules/Hero";
 <!-- todo: language switching: FR/TW/EN/DE. -->
 
 <Layout
-    title={Astro.url.pathname === '/' ? 'Homepage of Taiwanese Pianist Wei-Ting Hsieh' : 'Homepage of Taiwanese Pianist Wei-Ting Hsieh'}
+    title={Astro.url.pathname.replace(/\/$/, '') === '/' ? 'Homepage of Taiwanese Pianist Wei-Ting Hsieh' : 'Homepage of Taiwanese Pianist Wei-Ting Hsieh'}
     description="Homepage of Taiwanese Pianist Wei-Ting Hsieh"
 >
     <main class="page-content">

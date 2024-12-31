@@ -30,20 +30,15 @@ import { Footer } from "@modules/Footer";
             title="Discography"
             client:visible
             cards={[
-                                {
+                {
                     title: "Fantasiestücke, Robert Schumann",
                     description:
-                        `
-                        <iframe style="border-radius:12px" 
-                            src="https://open.spotify.com/embed/artist/05P8KWbEcJD8NWTUbAfjpn?utm_source=generator&theme=0" 
-                            width="100%"
-                            height="352" 
-                            frameborder="0" 
-                            allowfullscreen="" 
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                            loading="lazy">
-                        </iframe>
-                        `,
+                    `
+                    <iframe 
+                        style="border-radius:12px; aspect-ratio: 1; width: clamp(18.5rem, 100%, 37.5rem); height: 352px;" //18.5rem=18.5*16px = "296px" 37.5rem=37.5*16px = "600px", so the clamp is doing: width: 296px if the screen is smaller than 600px, and width: 600px if the screen is bigger than 600px
+                        src="https://open.spotify.com/embed/artist/05P8KWbEcJD8NWTUbAfjpn?utm_source=generator&theme=0" 
+                        frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    `,
                 },
             ]}
         />

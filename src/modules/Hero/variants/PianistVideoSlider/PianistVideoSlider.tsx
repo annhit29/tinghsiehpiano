@@ -54,32 +54,30 @@ export const PianistVideoSlider: FC<PianistVideoSliderProps> = ({ title, videoTi
             >
                 {videos.map((videoUrl, index) => (
                             <S.VideoSlide key={index}>
-                                {/* Title container */}
+                                {/* Title container: */}
                                 {videoTitles && videoTitles[index] && (
                                     <S.VideoTitle>
                                         {videoTitles[index]}
                                     </S.VideoTitle>
                                 )}
 
-                                <iframe
-                                    width="860px"
-                                    height="484px" // 484px is the standard height for 560px width videos for the 16:9 aspect ratio
+                                {/* Video container: */}
+                                <S.ResponsiveIframe
                                     src={videoUrl}
                                     title={`Video ${index + 1}`}
-                                    // frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     referrerPolicy="strict-origin-when-cross-origin"
                                     allowFullScreen
-                                ></iframe>
+                                />
                             </S.VideoSlide>
                 ))}
             </SwiperSlider>
-            <S.SlideNavLeft className={`swiper-button-prev ${isLeftDisabled ? 'disabled' : ''}`}>
+            {/* <S.SlideNavLeft className={`swiper-button-prev ${isLeftDisabled ? 'disabled' : ''}`}>
                 <Icon iconData="arrowLeftDark" alt="left arrow" />
             </S.SlideNavLeft>
             <S.SlideNavRight className={`swiper-button-next ${isRightDisabled ? 'disabled' : ''}`}>
                 <Icon iconData="arrowRightDark" alt="right arrow" />
-            </S.SlideNavRight>
+            </S.SlideNavRight> */}
             <div className="swiper-pagination"></div>
             </Container>
             </S.VideoCardsStyled>

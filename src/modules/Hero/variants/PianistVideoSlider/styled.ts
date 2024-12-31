@@ -122,6 +122,14 @@ export const PlayButton = styled.div`
     }
 `;
 
+export const ResponsiveIframe = styled.iframe`
+    width: 100%; // Make the iframe responsive with height: 400px
+    height:calc(100vw * (9 / 16)); // 16:9 aspect ratio wrt the viewport width (100vw), of the iframe 
+    max-width: 46rem; // Limit the maximum width, for better readability
+    max-height: 26rem; // Limit the maximum height, for better readability
+    border: none; // Remove iframe borders
+`;
+
 // todo: cont: ask chatGPT on conversation https://chatgpt.com/c/5115a22e-9804-4108-b9f2-9d6ff0a73573
 // 1) SlideNavLeft and SlideNavRight should be transparent when one of them is onSlideChange
 // 2) SlideNavLeft and SlideNavRight should be semi-transparent when isLeftDisabled OR isRightDisabled OR both are true.

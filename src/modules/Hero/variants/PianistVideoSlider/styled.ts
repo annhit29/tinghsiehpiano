@@ -35,7 +35,7 @@ export const PianistVideoSliderHeading = styled.div`
 
 export const VideoTitle = styled.div`
     color: ${Theme.secondary};
-    font-size: 24px;
+    font-size: clamp(20px, 2vw, 24px); // Responsive font-size: the font-size is at least 20px, and at most 24px, and scales dynamically with the viewport width (2% of the viewport width). This 2% makes the font-size responsive to screen size.
     font-weight: bold;
     line-height: 1.2;
     margin-bottom: 10px;
@@ -54,9 +54,9 @@ export const VideoSlide = styled.div`
     justify-content: center;
     margin-bottom: 40px;
 
-    iframe {
-        margin-top: 20px;
-    }
+    // iframe {
+    //     margin-top: 20px;
+    // }
 `;
 
 export const SlideNavLeft = styled.div`

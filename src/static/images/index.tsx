@@ -4,8 +4,8 @@ import PianistImg from "./pianist-img.webp";
 import Logo from "./logo.webp";
 
 import PianistSlider1 from "./homepage1.webp";
-import PianistSlider2 from "./homepage2.webp";
-import PianistSlider3 from "./aboutme.webp";
+import PianistSlider2 from "./aboutme.webp";
+import PianistSlider3 from "./homepage2.webp";
 import PianistSlider4 from "./contact.webp";
 
 import MusicPageImg1 from "./music-page-1.webp"; // todo: might put this image in the music page later

@@ -9,7 +9,7 @@ export const Biography: FC = () => {
     return (
         <S.BiographyStyled>
             <S.ContainerStyled>
-                <FadeIn> {/* FadeIn 0 seconds by default (see its source code) */}
+                {/* <FadeIn> FadeIn 0 seconds by default (see its source code) */}
                     <TextBox variant="background-text" bgText="Address">
                         <h3>Taiwanese pianist Wei-Ting Hsieh</h3>
                         
@@ -44,7 +44,7 @@ export const Biography: FC = () => {
                             Quentin Hindley, Maria Belooussova, Itamar Golan, Michael Hentz, and François Salque.
                         </S.BiographyParagraph>
                     </TextBox>
-                </FadeIn>
+                {/* </FadeIn> */}
             </S.ContainerStyled>
         </S.BiographyStyled>
     );

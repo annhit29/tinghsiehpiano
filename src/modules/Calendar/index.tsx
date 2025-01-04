@@ -11,7 +11,7 @@ export const Calendar: FC = () => {
         <S.CalendarStyled>
             <S.ContainerStyled>
                 <S.CalendarBox>
-                    <FadeIn delay={0.1}>
+                    {/* <FadeIn delay={0.1}> */}
                         <TextBox
                             variant="background-text"
                             bgText="Schedule3"
@@ -45,8 +45,8 @@ export const Calendar: FC = () => {
                             Chopin Sonata No. 2 Op. 35<br />        
                         </p> */}
                         </TextBox>
-                    </FadeIn>
-                    <FadeIn delay={0.2}>
+                    {/* </FadeIn> */}
+                    {/* <FadeIn delay={0.2}> */}
                         <TextBox
                             variant="background-text"
                             bgText="Schedule4"
@@ -80,8 +80,8 @@ export const Calendar: FC = () => {
                             Chopin Sonata No. 2 Op. 35<br />         
                         </p> */}
                         </TextBox>
-                    </FadeIn>
-                    <FadeIn delay={0.3}>
+                    {/* </FadeIn> */}
+                    {/* <FadeIn delay={0.3}> */}
                         <TextBox
                             variant="background-text"
                             bgText="Schedule1"
@@ -98,8 +98,8 @@ export const Calendar: FC = () => {
                         </S.ScheduleHeader2>
                         <p>Click me to see the program!</p>
                         </TextBox>
-                    </FadeIn>
-                    <FadeIn delay={0.4}>
+                    {/* </FadeIn> */}
+                    {/* <FadeIn delay={0.4}> */}
                         <TextBox
                             variant="background-text"
                             bgText="Schedule2"
@@ -116,7 +116,7 @@ export const Calendar: FC = () => {
                         </S.ScheduleHeader2>
                         <p>Bartók: Concerto for Two Pianos</p>
                         </TextBox>
-                    </FadeIn>
+                    {/* </FadeIn> */}
                 </S.CalendarBox>
                 {/* <FadeIn delay={0.5}>
                     <TextBox variant="background-text" bgText="Address">

@@ -31,15 +31,15 @@ export const MusicCards: FC<MusicCards> = ({
     // const cardsElements = cards.map((card, index) => {
         const cardsElements = cards.map((card) => {
     return (
-            <FadeIn> {/* FadeIn 0 seconds by default (see its source code) */}
-            {/*<FadeIn key={index}>*/}
+            // <FadeIn> {/* FadeIn 0 seconds by default (see its source code) */}
+            // {/*<FadeIn key={index}>*/}
                 <TextBox>
                     <h3>{card.title}</h3>
                     {/* Use dangerouslySetInnerHTML to be able to render HTML content as well: */}
                     <div dangerouslySetInnerHTML={{ __html: card.description }} />
                     {/* todo: dangerouslySetInnerHTML lets one to put an untrusted source. Change to allowing only trusted source.*/}
                 </TextBox>
-            </FadeIn>
+            // </FadeIn>
         );
     });
 
@@ -47,12 +47,12 @@ export const MusicCards: FC<MusicCards> = ({
         <S.MusicCardsStyled>
             <Container>
                 {title && description && (
-                    <FadeIn>
+                    // <FadeIn>
                         <S.MusicCardsHeading>
                             {description && <p>{description}</p>}
                             {title && <h2>{title}</h2>}
                         </S.MusicCardsHeading>
-                    </FadeIn>
+                    // </FadeIn>
                 )}
                 <S.MusicCardsGrid>{cardsElements}</S.MusicCardsGrid>
             </Container>

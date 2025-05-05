@@ -11,6 +11,24 @@ export const Calendar: FC = () => {
         <S.CalendarStyled>
             <S.ContainerStyled>
                 <S.CalendarBox>
+                    {/* <FadeIn delay={0.0}> */}
+                        <TextBox
+                            variant="background-text"
+                            bgText="Schedule3"
+                            boxAsLink={true}
+                            href="https://www.accupass.com/event/2504020134091864911796"
+                            target="_blank"
+                        >
+                        <S.ScheduleHeader1>
+                            <h3>Piano Masterclass</h3>
+                            <h4>August 23, 2025</h4>
+                        </S.ScheduleHeader1>
+                        <S.ScheduleHeader2>
+                        <h3>TT Music Space</h3>
+                        </S.ScheduleHeader2>
+                        <p>Playing Chopin</p>
+                        </TextBox>
+                    {/* </FadeIn> */}
                     {/* <FadeIn delay={0.1}> */}
                         <TextBox
                             variant="background-text"

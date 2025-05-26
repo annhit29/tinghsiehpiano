@@ -15,7 +15,7 @@ export const Navigation: FC = () => {
                     </li>
                     {/* <li>
                         <a
-                            href="https://www.instagram.com/ting61141/"
+                            href="https://www.instagram.com/weitingpianist/"
                             target="_blank"
                         >
                             Social Media

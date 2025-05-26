@@ -8,7 +8,7 @@ export const Socials: FC = ({ ...rest }) => {
             <S.SocialsList>
                 <S.SocialsListItem>
                     <S.SocialsLink
-                        href="https://www.instagram.com/ting61141/"
+                        href="https://www.instagram.com/weitingpianist/"
                         target="_blank"
                         rel="noreferrer"
                     >

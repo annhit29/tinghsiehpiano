@@ -32,7 +32,7 @@ export const Header: FC = () => {
             <S.ContainerStyled>
                 {/* <Logo /> */}
                 <Navigation />
-                {/* todo: put language selection */}
+                {/* todo: put language selection? */}
             </S.ContainerStyled>
         </S.HeaderStyled>
     );

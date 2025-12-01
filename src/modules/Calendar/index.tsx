@@ -3,14 +3,36 @@ import * as S from "./styled";
 import { TextBox } from "@components/textBox";
 import { FadeIn } from "@utils/animations/FadeIn";
 
+import { useTranslation } from "react-i18next";
+
 // Calendar component is for calendar.astro
 
 // schedule title, date, location, and program, link to external websites
 export const Calendar: FC = () => {
+    const { t } = useTranslation("calendar");
     return (
         <S.CalendarStyled>
             <S.ContainerStyled>
                 <S.CalendarBox>
+                    {/* <FadeIn delay={0.0}> */}
+                        <TextBox
+                            variant="background-text"
+                            bgText="Schedule3"
+                            boxAsLink={true}
+                            href="https://www.opentix.life/event/1973931012924928001"
+                            target="_blank"
+                        >
+                        <S.ScheduleHeader1>
+                            <h3>University 130th Anniversary Concert</h3>
+                            <h4>December 2, 2025</h4>
+                        </S.ScheduleHeader1>
+                        <S.ScheduleHeader2>
+                        <h3>National Taiwan Concert Hall</h3>
+                        </S.ScheduleHeader2>
+                        <p>Piano Concerto No. 2</p>
+                        </TextBox>
+                    {/* </FadeIn> */}
+
                     {/* <FadeIn delay={0.0}> */}
                         <TextBox
                             variant="background-text"

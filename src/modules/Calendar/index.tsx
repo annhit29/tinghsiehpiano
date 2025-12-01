@@ -38,6 +38,25 @@ export const Calendar: FC = () => {
                             variant="background-text"
                             bgText="Schedule3"
                             boxAsLink={true}
+                            href="https://www.instagram.com/weitingpianist/p/DQeREcpD-d6/"
+                            target="_blank"
+                        >
+                        <S.ScheduleHeader1>
+                            <h3>Open-air Chopin concert</h3>
+                            <h4>November 16, 2025</h4>
+                        </S.ScheduleHeader1>
+                        <S.ScheduleHeader2>
+                        <h3>Daan Forest Park</h3>
+                        </S.ScheduleHeader2>
+                        <p>Click me to see the program!</p>
+                        </TextBox>
+                    {/* </FadeIn> */}
+
+                    {/* <FadeIn delay={0.0}> */}
+                        <TextBox
+                            variant="background-text"
+                            bgText="Schedule3"
+                            boxAsLink={true}
                             href="https://www.accupass.com/event/2504020134091864911796"
                             target="_blank"
                         >

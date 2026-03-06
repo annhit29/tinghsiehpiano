@@ -2,10 +2,14 @@ import { type FC } from "react";
 import * as S from "./styled";
 import { TextBox } from "@components/textBox";
 import { FadeIn } from "@utils/animations/FadeIn";
+import "../../i18n";
+import { useTranslation } from "react-i18next";
 
 // Contact component is for contact.astro
 
 export const Contact: FC = () => {
+    const { t } = useTranslation("contact");
+
     return (
         <S.ContactStyled>
             <S.ContainerStyled>
@@ -21,16 +25,16 @@ export const Contact: FC = () => {
                         >
                             <h3>ting61141@gmail.com</h3>
                             <p>
-                                Write me an email if you have any questions
+                                {t("emailDescription")}
                             </p>
                         </TextBox>
                     {/* </FadeIn> */}
                     {/* <FadeIn delay={0.2}> */}
-                    <TextBox variant="background-text" bgText="Address">
-                        <h3>Address</h3>
+                    <TextBox variant="background-text" bgText={t("addressTitle")}>
+                        <h3>{t("addressTitle")}</h3>
                         
                         {/* <p>Some street 123, 12345 City, Country</p> */}
-                        <p>Office: No. 134, Ho-ping East Rd., Sec. 2, Daan District, Taipei City 10671, Taiwan</p>
+                        <p>{t("addressDetail")}</p>
                     </TextBox>
                     {/* </FadeIn> */}
                     {/* <FadeIn delay={0.3}>

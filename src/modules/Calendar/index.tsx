@@ -19,6 +19,16 @@ interface CalendarEvent {
 
 const events: CalendarEvent[] = [
     {
+        id: "palermo-classica",
+        title: "Piano Recital Palermo Classica",
+        date: "2026-04-05",
+        displayDate: "April 5, 2026",
+        venue: "Complesso Monumentale dello Steri",
+        description: "Between Balance and Storm - Mozart and Schumann",
+        href: "https://palermoclassica.organizzatori.18tickets.it/event/46972",
+        bgText: "Schedule3",
+    },
+    {
         id: "university-130",
         title: "University 130th Anniversary Concert",
         date: "2025-12-02",

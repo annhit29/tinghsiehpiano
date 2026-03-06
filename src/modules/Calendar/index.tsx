@@ -1,8 +1,9 @@
-import { type FC, useState, useMemo } from "react";
+import { type FC, useState, useMemo, useEffect } from "react";
 import * as S from "./styled";
 import { TextBox } from "@components/textBox";
 
 import { useTranslation } from "react-i18next";
+import i18n from "../../i18n";
 
 // Calendar component is for calendar.astro
 
@@ -104,6 +105,15 @@ const events: CalendarEvent[] = [
 export const Calendar: FC = () => {
     const { t } = useTranslation("calendar");
 
+    // Always sync i18n language with URL path on mount
+    useEffect(() => {
+        const path = window.location.pathname;
+        const lang = path.startsWith("/fr") ? "fr" : "en";
+        if (i18n.language !== lang) {
+            i18n.changeLanguage(lang);
+        }
+    }, []);
+
     const today = useMemo(() => {
         const d = new Date();
         d.setHours(0, 0, 0, 0);
@@ -169,13 +179,13 @@ export const Calendar: FC = () => {
                                 target="_blank"
                             >
                                 <S.ScheduleHeader1>
-                                    <h3>{event.title}</h3>
-                                    <h4>{event.displayDate}</h4>
+                                    <h3>{t(`${event.id}.title`, event.title)}</h3>
+                                    <h4>{t(`${event.id}.displayDate`, event.displayDate)}</h4>
                                 </S.ScheduleHeader1>
                                 <S.ScheduleHeader2>
-                                    <h3>{event.venue}</h3>
+                                    <h3>{t(`${event.id}.venue`, event.venue)}</h3>
                                 </S.ScheduleHeader2>
-                                <p>{event.description}</p>
+                                <p>{t(`${event.id}.description`, event.description)}</p>
                             </TextBox>
                         ))
                     ) : (

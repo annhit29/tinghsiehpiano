@@ -1,0 +1,53 @@
+{
+  "upcoming": "À venir",
+  "past": "Passés",
+  "noUpcomingEvents": "Pas d'événements à venir — revenez bientôt !",
+  "palermo-classica": {
+    "title": "Récital de piano Palermo Classica",
+    "displayDate": "5 avril 2026",
+    "venue": "Complesso Monumentale dello Steri",
+    "description": "Entre équilibre et tempête - Mozart et Schumann"
+  },
+  "university-130": {
+    "title": "Concert du 130e anniversaire de l'université",
+    "displayDate": "2 décembre 2025",
+    "venue": "Salle de concert nationale de Taïwan",
+    "description": "Concerto pour piano n°2"
+  },
+  "chopin-openair": {
+    "title": "Concert Chopin en plein air",
+    "displayDate": "16 novembre 2025",
+    "venue": "Parc Daan Forest",
+    "description": "Cliquez pour voir le programme !"
+  },
+  "masterclass-aug25": {
+    "title": "Masterclass de piano",
+    "displayDate": "23 août 2025",
+    "venue": "TT Music Space",
+    "description": "Jouer Chopin"
+  },
+  "recital-jan25": {
+    "title": "Récital de piano solo",
+    "displayDate": "25 janvier 2025",
+    "venue": "Salle de concert nationale de Taïwan",
+    "description": "Cliquez pour voir le programme !"
+  },
+  "recital-feb25": {
+    "title": "Récital de piano solo",
+    "displayDate": "8 février 2025",
+    "venue": "Théâtre national de Taichung",
+    "description": "Cliquez pour voir le programme !"
+  },
+  "recital-sep24": {
+    "title": "Récital de piano solo",
+    "displayDate": "9 septembre 2024",
+    "venue": "Hanovre, Allemagne",
+    "description": "Cliquez pour voir le programme !"
+  },
+  "ntue-oct24": {
+    "title": "Concert NTUE",
+    "displayDate": "15 octobre 2024",
+    "venue": "Salle de concert nationale de Taïwan",
+    "description": "Bartók : Concerto pour deux pianos"
+  }
+}

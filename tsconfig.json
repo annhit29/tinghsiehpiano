@@ -16,6 +16,10 @@
         "@utils/*": ["utils/*"],
         "@data/*": ["data/*"],
         "@content/*": ["content/*"],
-    }
-  }
+    },
+      // look here for our custom i18next augmentations:
+    "typeRoots": ["src/@types", "node_modules/@types"]
+  },
+  // also include that folder so TS actually loads the .d.ts files:
+  "include": ["src", "src/@types"]
 }

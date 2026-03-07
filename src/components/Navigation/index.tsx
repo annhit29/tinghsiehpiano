@@ -1,8 +1,12 @@
 import * as S from "./styled";
 import { useState, type FC } from "react";
 import { Hamburger } from "./components/Hamburger";
+import { useTranslation } from "react-i18next";
+import "../../i18n";
 
 export const Navigation: FC = () => {
+    const { t } = useTranslation("navigation");
+    
     // to update values for all components, keep the state here
     const [isOpen, setIsOpen] = useState(false);
 
@@ -11,7 +15,7 @@ export const Navigation: FC = () => {
             <S.NavigationListWrapper $isOpen={isOpen}>
                 <S.NavigationList>
                     <li>
-                        <a href="/">Home</a>
+                        <a href="/"> {t("home")} </a>
                     </li>
                     {/* <li>
                         <a
@@ -22,16 +26,16 @@ export const Navigation: FC = () => {
                         </a>
                     </li> */}
                     <li>
-                        <a href="/calendar">Calendar</a>
+                        <a href="/calendar"> {t("calendar")} </a>
                     </li>
                     <li>
-                        <a href="/music">Music</a>
+                        <a href="/music"> {t("music")} </a>
                     </li>
                     <li>
-                        <a href="/biography">Biography</a>
+                        <a href="/biography"> {t("biography")} </a>
                     </li>
                     <li>
-                        <a href="/contact">Contact</a>
+                        <a href="/contact"> {t("contact")} </a>
                     </li>
                 </S.NavigationList>
             </S.NavigationListWrapper>

@@ -1,5 +1,5 @@
 ---
-import { t, changeLanguage } from "i18next";
+import { changeLanguage } from "i18next";
 import { ContentSection } from "@modules/ContentSection";
 import Layout from "../../layouts/Layout.astro";
 import { FadeIn } from "@utils/animations/FadeIn";
@@ -9,8 +9,8 @@ changeLanguage("fr");
 ---
 
 <Layout
-    title={t("errorpage.title")}
-    description={t("errorpage.paragraph")}
+    title="404 | Page non trouvée"
+    description="La page que vous recherchez a peut-être été supprimée, son nom a changé ou elle est temporairement indisponible."
 >
     <main class="page-content page-404">
         <ContentSection
@@ -26,9 +26,9 @@ changeLanguage("fr");
             }}
         >
             <FadeIn client:visible>
-                <h1>{t("errorpage.fadeIn.h1")}</h1>
+                <h1>Wooops - Soory! 404</h1>
                 <p>
-                    {t("errorpage.fadeIn.paragraph")}
+                    La page que vous recherchez a peut-être été supprimée, son nom a changé ou elle est temporairement indisponible.
                 </p>
 
                 <Button

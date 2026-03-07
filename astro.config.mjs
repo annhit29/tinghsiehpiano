@@ -1,12 +1,12 @@
 import { defineConfig } from "astro/config";
-import astroI18next from "astro-i18next";
+import astroI18next from "astro-i18next"; //from the file astro-i18next.config.mjs
 import react from "@astrojs/react";
 import CompressionPlugin from "vite-plugin-compression";
 import sitemap from "@astrojs/sitemap";
 
 // Set siteUrl dynamically based on environment variables:
 const isProduction = process.env.NODE_ENV === 'production';
-const siteUrl = isProduction ? 'https://www.tinghsiehpiano.me' : process.env.URL || 'http://localhost:4321';
+const siteUrl = isProduction ? 'https://www.tinghsiehpiano.com' : process.env.URL || 'http://localhost:4321';
 
 console.log('siteUrl:', siteUrl);
 
@@ -15,12 +15,12 @@ export { siteUrl };
 const date = new Date().toISOString();
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://www.tinghsiehpiano.me', //siteUrl, //+ "/", // the URL of my website
+    site: 'https://www.tinghsiehpiano.com', //siteUrl, //+ "/", // the URL of my website
     trailingSlash: 'never',  // This ensures all URLs don't have a trailing slash
 
     // added integrations:
     integrations: [
-        astroI18next(), // i18next integration
+        astroI18next(), // automatically pick up astro-i18next.config.mjs
         react(), // React integration
         sitemap({
             serialize(item) {

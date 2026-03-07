@@ -9,8 +9,6 @@ import enContact from "./locales/en/contact.json";
 import frContact from "./locales/fr/contact.json";
 import enBiography from "./locales/en/biography.json";
 import frBiography from "./locales/fr/biography.json";
-import enHomepage from "./locales/en/homepage.json";
-import frHomepage from "./locales/fr/homepage.json";
 
 // Detect language from URL path: /fr/* → "fr", everything else → "en"
 const detectedLng =
@@ -23,7 +21,7 @@ i18n
   .init({
     lng: detectedLng,
     fallbackLng: "en",
-    ns: ["calendar", "contact", "biography", "homepage"],
+    ns: ["calendar", "contact", "biography"],
     defaultNS: "calendar",
     interpolation: { escapeValue: false },
     resources: {
@@ -31,13 +29,11 @@ i18n
         calendar: enCalendar,
         contact: enContact,
         biography: enBiography,
-        homepage: enHomepage,
       },
       fr: {
         calendar: frCalendar,
         contact: frContact,
         biography: frBiography,
-        homepage: frHomepage,
       },
     },
   });

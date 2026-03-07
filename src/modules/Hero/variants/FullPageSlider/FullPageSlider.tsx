@@ -8,6 +8,7 @@ import { Icon } from "@static/icons";
 import { FadeIn } from "@utils/animations/FadeIn";
 import { Button } from "@components/Button";
 import { useTranslation } from "react-i18next";
+import "../../../../i18n";
 
 export type FullPageSliderProps = {
     // content treated as HTML output

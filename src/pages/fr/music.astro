@@ -1,65 +1,57 @@
 ---
+import { changeLanguage } from "i18next";
 import Layout from "../../layouts/Layout.astro";
 import { Pianist } from "@modules/Hero";
-// import { PianistSlider3, MusicPageImg1, MusicPageImg2 } from "@static/images";
-import { PianistSlider3 } from "@static/images";
+import { PianistSlider2 } from "@static/images";
 import { MusicCards } from "@modules/MusicCards";
 import { PianistVideoSlider } from "@modules/Hero/variants/PianistVideoSlider/PianistVideoSlider";
 import { Footer } from "@modules/Footer";
-import { Trans } from "astro-i18next/components"; // Import Trans component
-import i18next, { t, changeLanguage } from "i18next"; // Import i18next for translations
 
 changeLanguage("fr");
 ---
 
 <Layout
-    title={t("music.site.title")}
-    description={t("music.site.description")}
+    title="Wei-Ting Pianist | Musique"
+    description="Musique interprétée par la pianiste taïwanaise Wei-Ting Hsieh"
 >
     <main class="page-content">
         <Pianist
             pianistType="ParallaxImage"
             client:visible
             data={{
-                image: PianistSlider3.src,
+                image: PianistSlider2.src,
                 content: {
-                    title: t("music.page-content.title"),
-                    paragraph:
-                        t("music.page-content.paragraph"),
+                    title: "MUSIQUE",
+                    paragraph: "Découvrez la musique de Wei-Ting HSIEH, pianiste talentueuse."
                 },
             }}
         />
         <MusicCards
-            description={t("music.music-card.description")}
-            title={t("music.music-card.title")}
+            description="MUSIQUE"
+            title="Discographie"
             client:visible
             cards={[
-                                {
+                {
                     title: "Fantasiestücke, Robert Schumann",
                     description:
-                        `
-                        <iframe style="border-radius:12px" 
-                            src="https://open.spotify.com/embed/artist/05P8KWbEcJD8NWTUbAfjpn?utm_source=generator&theme=0" 
-                            width="100%"
-                            height="352" 
-                            frameborder="0" 
-                            allowfullscreen="" 
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                            loading="lazy">
-                        </iframe>
-                        `,
+                    `
+                    <iframe 
+                        style="border-radius:12px; aspect-ratio: 1; width: clamp(18.5rem, 100%, 37.5rem); height: 352px;" //18.5rem=18.5*16px = "296px" 37.5rem=37.5*16px = "600px", so the clamp is doing: width: 296px if the screen is smaller than 600px, and width: 600px if the screen is bigger than 600px
+                        src="https://open.spotify.com/embed/artist/05P8KWbEcJD8NWTUbAfjpn?utm_source=generator&theme=0" 
+                        frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    `,
                 },
             ]}
         />
         
         <PianistVideoSlider
-            title={t("music.pianovideoslider.title")}
+            title="Vidéos"
             client:visible
             videoTitles={
                 [
                 "Wei-Ting HSIEH, J.Ph. Rameau: Le Rappel des Oiseaux",
-                "Wei-Ting HSIEH, " + t("music.pianovideoslider.videoTitles.second-round") + ", 18th Chopin Competition",
-                "Wei-Ting HSIEH, " + t("music.pianovideoslider.videoTitles.first-round") + ", 18th Chopin Competition"
+                "Wei-Ting HSIEH, second round, 18th Chopin Competition",
+                "Wei-Ting HSIEH, first round, 18th Chopin Competition"
                 ]
             }
             videos={[

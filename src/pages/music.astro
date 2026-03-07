@@ -1,10 +1,13 @@
 ---
+import { changeLanguage } from "i18next";
 import Layout from "../layouts/Layout.astro";
 import { Pianist } from "@modules/Hero";
 import { PianistSlider2 } from "@static/images";
 import { MusicCards } from "@modules/MusicCards";
 import { PianistVideoSlider } from "@modules/Hero/variants/PianistVideoSlider/PianistVideoSlider";
 import { Footer } from "@modules/Footer";
+
+changeLanguage("en");
 ---
 
 <Layout

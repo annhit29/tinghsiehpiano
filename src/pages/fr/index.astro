@@ -1,17 +1,17 @@
 ---
+import { changeLanguage } from "i18next";
 import { PianistSlider1, PianistSlider2 } from "@static/images";
 import Layout from "../../layouts/Layout.astro";
 import { Pianist } from "@modules/Hero";
-import i18next, { t, changeLanguage } from "i18next"; // Import i18next for translations
 
 changeLanguage("fr");
 ---
 
-<!-- the highest level of the page, the landing page which is also the homepage in this website. -->
+<!-- the highest level of the page, the homepage. -->
 
 <Layout
-    title={t("site.title")}
-    description={t("site.description")}
+    title={Astro.url.pathname.replace(/\/$/, '') === '/' ? 'Wei-Ting Hsieh' : 'Wei-Ting Hsieh'}
+    description={Astro.url.pathname.replace(/\/$/, '') === '/' ? 'Homepage of Taiwanese Pianist Wei-Ting Hsieh' : 'Homepage of Taiwanese Pianist Wei-Ting Hsieh'}
 >
     <main class="page-content">
         <Pianist
@@ -19,7 +19,7 @@ changeLanguage("fr");
             pianistType="fullPageSlider"
             data={[
                 {
-                    subtitle: t("pianist.subtitle"),
+                    subtitle: "Pianiste",
                     title: "Wei-Ting HSIEH",
                     background: PianistSlider1.src,
                     // paragraph:
@@ -30,12 +30,12 @@ changeLanguage("fr");
                     },
                 },
                 {
-                    subtitle: t("pianist.subtitle"),
+                    subtitle: "Pianiste",
                     title: "Wei-Ting HSIEH",
                     background: PianistSlider2.src,
-                    paragraph: t("pianist.paragraph"),
+                    paragraph: "Bonne écoute",
                     button: {
-                        text: t("buttons.listen"),
+                        text: "Écouter",
                         link: "/music",
                     },
                 },

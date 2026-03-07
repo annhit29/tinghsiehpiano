@@ -4,6 +4,7 @@
 import * as S from "./styled";
 import { Navigation } from "@components/Navigation";
 import { useEffect, type FC } from "react";
+import LanguageSwitcher from "@components/LanguageSwitcher/LanguageSwitcher";
 
 export const Header: FC = () => {
     // on scroll header needs to get class of "scrolled" and change its background color
@@ -32,7 +33,7 @@ export const Header: FC = () => {
             <S.ContainerStyled>
                 {/* <Logo /> */}
                 <Navigation />
-                {/* todo: put language selection */}
+                <LanguageSwitcher />
             </S.ContainerStyled>
         </S.HeaderStyled>
     );

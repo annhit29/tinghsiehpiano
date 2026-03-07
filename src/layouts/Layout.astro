@@ -8,10 +8,11 @@ import MetaConfig from "./MetaConfig.astro";
 interface Props {
     title: string;
     description: string;
+    lang?: string;
     overwritePreview?: string;
 }
 
-const { title, description, overwritePreview } = Astro.props;
+const { title, description, lang = "en", overwritePreview } = Astro.props;
 ---
 
 <!-- 
@@ -20,7 +21,7 @@ const { title, description, overwritePreview } = Astro.props;
     It also includes the MetaConfig component to set the metadata for the page.
 -->
 <!doctype html>
-<html lang="en"> <!-- todo: change to dynamic language -->
+<html lang={lang}>
     <head>
         <MetaConfig
             title={title}

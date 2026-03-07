@@ -1,0 +1,53 @@
+{
+  "upcoming": "Upcoming",
+  "past": "Past",
+  "noUpcomingEvents": "No upcoming events — check back soon!",
+  "palermo-classica": {
+    "title": "Piano Recital Palermo Classica",
+    "displayDate": "April 5, 2026",
+    "venue": "Complesso Monumentale dello Steri",
+    "description": "Between Balance and Storm - Mozart and Schumann"
+  },
+  "university-130": {
+    "title": "University 130th Anniversary Concert",
+    "displayDate": "December 2, 2025",
+    "venue": "National Taiwan Concert Hall",
+    "description": "Piano Concerto No. 2"
+  },
+  "chopin-openair": {
+    "title": "Open-air Chopin concert",
+    "displayDate": "November 16, 2025",
+    "venue": "Daan Forest Park",
+    "description": "Click me to see the program!"
+  },
+  "masterclass-aug25": {
+    "title": "Piano Masterclass",
+    "displayDate": "August 23, 2025",
+    "venue": "TT Music Space",
+    "description": "Playing Chopin"
+  },
+  "recital-jan25": {
+    "title": "Piano Solo Recital",
+    "displayDate": "January 25, 2025",
+    "venue": "National Taiwan Concert Hall",
+    "description": "Click me to see the program!"
+  },
+  "recital-feb25": {
+    "title": "Piano Solo Recital",
+    "displayDate": "February 8, 2025",
+    "venue": "National Taichung Theater",
+    "description": "Click me to see the program!"
+  },
+  "recital-sep24": {
+    "title": "Piano Solo Recital",
+    "displayDate": "September 9, 2024",
+    "venue": "Hannover, Germany",
+    "description": "Click me to see the program!"
+  },
+  "ntue-oct24": {
+    "title": "NTUE Concert",
+    "displayDate": "October 15, 2024",
+    "venue": "National Taiwan Concert Hall",
+    "description": "Bartók: Concerto for Two Pianos"
+  }
+}

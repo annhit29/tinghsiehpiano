@@ -7,6 +7,7 @@ import { Parallax, Pagination, Autoplay } from "swiper/modules";
 import { Icon } from "@static/icons";
 import { FadeIn } from "@utils/animations/FadeIn";
 import { Button } from "@components/Button";
+import { useTranslation } from "react-i18next";
 
 export type FullPageSliderProps = {
     // content treated as HTML output
@@ -23,6 +24,8 @@ export type FullPageSliderProps = {
 };
 
 export const FullPageSlider: FC<FullPageSliderProps> = ({ content }) => {
+    const { t } = useTranslation("homepage");
+
     // do not render if there are no elements
     if (!content || content.length === 0) {
         return null;
@@ -89,14 +92,14 @@ export const FullPageSlider: FC<FullPageSliderProps> = ({ content }) => {
             {slides.length > 1 ? (
                 <>
                     <S.FullPageSliderTextToSlide>
-                        Swipe to slide
+                        {t("sliderText")}
                         <Icon iconData="arrowRight" alt="arrow icon" />
                     </S.FullPageSliderTextToSlide>
                     <div className="swiper-pagination"></div>
                 </>
             ) : (
                 <S.FullPageSliderTextToSlide>
-                    Scroll down
+                    {t("scrollDown")}
                     <Icon iconData="arrowDown" alt="arrow icon" />
                 </S.FullPageSliderTextToSlide>
             )}

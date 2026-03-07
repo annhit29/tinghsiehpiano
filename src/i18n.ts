@@ -13,6 +13,8 @@ import enHomepage from "./locales/en/homepage.json";
 import frHomepage from "./locales/fr/homepage.json";
 import enNavigation from "./locales/en/navigation.json";
 import frNavigation from "./locales/fr/navigation.json";
+import enFooter from "./locales/en/footer.json";
+import frFooter from "./locales/fr/footer.json";
 
 // Detect language from URL path: /fr/* → "fr", everything else → "en"
 const detectedLng =
@@ -25,7 +27,7 @@ i18n
   .init({
     lng: detectedLng,
     fallbackLng: "en",
-    ns: ["calendar", "contact", "biography", "homepage", "navigation"],
+    ns: ["calendar", "contact", "biography", "homepage", "navigation", "footer"],
     defaultNS: "calendar",
     interpolation: { escapeValue: false },
     resources: {
@@ -34,14 +36,16 @@ i18n
         contact: enContact,
         biography: enBiography,
         homepage: enHomepage,
-        navigation: enNavigation
+        navigation: enNavigation,
+        footer: enFooter
       },
       fr: {
         calendar: frCalendar,
         contact: frContact,
         biography: frBiography,
         homepage: frHomepage,
-        navigation: frNavigation
+        navigation: frNavigation,
+        footer: frFooter
       },
     },
   });

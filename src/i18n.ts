@@ -7,6 +7,8 @@ import enCalendar from "./locales/en/calendar.json";
 import frCalendar from "./locales/fr/calendar.json";
 import enContact from "./locales/en/contact.json";
 import frContact from "./locales/fr/contact.json";
+import enBiography from "./locales/en/biography.json";
+import frBiography from "./locales/fr/biography.json";
 
 // Detect language from URL path: /fr/* → "fr", everything else → "en"
 const detectedLng =
@@ -19,17 +21,19 @@ i18n
   .init({
     lng: detectedLng,
     fallbackLng: "en",
-    ns: ["calendar", "contact"],
+    ns: ["calendar", "contact", "biography"],
     defaultNS: "calendar",
     interpolation: { escapeValue: false },
     resources: {
       en: {
         calendar: enCalendar,
         contact: enContact,
+        biography: enBiography,
       },
       fr: {
         calendar: frCalendar,
         contact: frContact,
+        biography: frBiography,
       },
     },
   });

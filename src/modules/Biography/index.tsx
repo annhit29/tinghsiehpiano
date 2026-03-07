@@ -2,16 +2,20 @@ import { type FC } from "react";
 import * as S from "./styled";
 import { TextBox } from "@components/textBox";
 import { FadeIn } from "@utils/animations/FadeIn";
+import { useTranslation } from "react-i18next";
+import "../../i18n";
 
 // Biography component is for biography.astro
 
 export const Biography: FC = () => {
+    const { t } = useTranslation("biography");
+    
     return (
         <S.BiographyStyled>
             <S.ContainerStyled>
                 {/* <FadeIn> FadeIn 0 seconds by default (see its source code) */}
                     <TextBox variant="background-text" bgText="Address">
-                        <h3>Taiwanese pianist Wei-Ting Hsieh</h3>
+                        <h3>{t("title")}</h3>
                         
                         <S.BiographyParagraph>Pianist Wei-Ting Hsieh was born in 1996 in Taipei, Taiwan. She learned to play the piano at the age of four. 
                             Wei-Ting Hsieh studied with Chin-Chuan Chang in Taiwan. She studied with Michel Beroff, Laurent Cabasso, and Marie-Josèphe Jude at the Conservatoire National Supérieur de Musique et de Danse de Paris, and later with Arie Vardi in Germany. 

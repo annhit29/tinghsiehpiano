@@ -3,10 +3,12 @@ import { useState, type FC } from "react";
 import { Hamburger } from "./components/Hamburger";
 import { useTranslation } from "react-i18next";
 import "../../i18n";
+import { useLocalePath } from "../../hooks/useLocalePath";
 
 export const Navigation: FC = () => {
     const { t } = useTranslation("navigation");
-    
+    const localePath = useLocalePath();
+
     // to update values for all components, keep the state here
     const [isOpen, setIsOpen] = useState(false);
 
@@ -15,7 +17,7 @@ export const Navigation: FC = () => {
             <S.NavigationListWrapper $isOpen={isOpen}>
                 <S.NavigationList>
                     <li>
-                        <a href="/"> {t("home")} </a>
+                        <a href={localePath("/")}> {t("home")} </a>
                     </li>
                     {/* <li>
                         <a
@@ -26,16 +28,16 @@ export const Navigation: FC = () => {
                         </a>
                     </li> */}
                     <li>
-                        <a href="/calendar"> {t("calendar")} </a>
+                        <a href={localePath("/calendar")}> {t("calendar")} </a>
                     </li>
                     <li>
-                        <a href="/music"> {t("music")} </a>
+                        <a href={localePath("/music")}> {t("music")} </a>
                     </li>
                     <li>
-                        <a href="/biography"> {t("biography")} </a>
+                        <a href={localePath("/biography")}> {t("biography")} </a>
                     </li>
                     <li>
-                        <a href="/contact"> {t("contact")} </a>
+                        <a href={localePath("/contact")}> {t("contact")} </a>
                     </li>
                 </S.NavigationList>
             </S.NavigationListWrapper>

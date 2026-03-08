@@ -1,6 +1,7 @@
 import * as S from "./styled";
 import type { FC } from "react";
 import { Image } from "@static/images";
+import { useLocalePath } from "../../hooks/useLocalePath";
 /**
  * Logo is a text but if there is need to use img, add two img from <Image component
  * @import
@@ -11,9 +12,10 @@ import { Image } from "@static/images";
  * <Image src="logo-dark" alt="logo" data-theme-el="dark" />
  */
 export const Logo: FC = () => {
+    const localePath = useLocalePath();
     return (
         <S.LogoStyled>
-            <a href="/">
+            <a href={localePath("/")}>
                 <Image srcLocal="logo" alt="logo" />
             </a>
         </S.LogoStyled>

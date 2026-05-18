@@ -2,6 +2,13 @@
   "upcoming": "Upcoming",
   "past": "Past",
   "noUpcomingEvents": "No upcoming events — check back soon!",
+
+  "unboxing-concert": {
+    "title": "Sound Beyond the Ordinary — C. Bechstein Century-Old Masterpiece Unveiling Concert",
+    "displayDate": "May 23, 2026, 2:00 PM",
+    "venue": "Yunlin Performance Hall",
+    "description": "Click me to see more!"
+  },
   "palermo-classica": {
     "title": "Piano Recital Palermo Classica",
     "displayDate": "April 5, 2026",

@@ -20,6 +20,16 @@ interface CalendarEvent {
 
 const events: CalendarEvent[] = [
     {
+        id: "unboxing-concert",
+        title: "Sound Beyond the Ordinary — C. Bechstein Century-Old Masterpiece Unveiling Concert",
+        date: "2026-05-23",
+        displayDate: "May 23, 2026, 2:00 PM",
+        venue: "Yunlin Performance Hall",
+        description: "Click me to see more!",
+        href: "https://www.opentix.life/event/2048954204112920577",
+        bgText: "Schedule3",
+    },
+    {
         id: "palermo-classica",
         title: "Piano Recital Palermo Classica",
         date: "2026-04-05",

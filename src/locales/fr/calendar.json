@@ -2,6 +2,13 @@
   "upcoming": "À venir",
   "past": "Passés",
   "noUpcomingEvents": "Pas d'événements à venir — revenez bientôt !",
+
+  "unboxing-concert": {
+    "title": "Un Son Hors du Commun — Concert de Dévoilement du Piano Centenaire C. Bechstein",
+    "displayDate": "23 mai 2026, 14:00",
+    "venue": "Salle de concert de Yunlin",
+    "description": "Cliquez pour voir plus !"
+  },
   "palermo-classica": {
     "title": "Récital de piano Palermo Classica",
     "displayDate": "5 avril 2026",

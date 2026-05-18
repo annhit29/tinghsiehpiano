@@ -3,8 +3,14 @@
   "past": "Passés",
   "noUpcomingEvents": "Pas d'événements à venir — revenez bientôt !",
 
+  "shanghai-bank-concert": {
+    "title": "Concert de piano de la Banque commerciale de Shanghai",
+    "displayDate": "3 juin 2026",
+    "venue": "",
+    "description": ""
+  },
   "unboxing-concert": {
-    "title": "Un Son Hors du Commun — Concert de Dévoilement du Piano Centenaire C. Bechstein",
+    "title": "Un son hors du commun — Concert d'inauguration du piano centenaire C. Bechstein",
     "displayDate": "23 mai 2026, 14:00",
     "venue": "Salle de concert de Yunlin",
     "description": "Cliquez pour voir plus !"

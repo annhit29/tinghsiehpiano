@@ -20,6 +20,16 @@ interface CalendarEvent {
 
 const events: CalendarEvent[] = [
     {
+        id: "shanghai-bank-concert",
+        title: "Shanghai Commercial Bank Piano Concert",
+        date: "2026-06-03",
+        displayDate: "June 3, 2026",
+        venue: "",
+        description: "",
+        href: "",
+        bgText: "Schedule3",
+    },
+    {
         id: "unboxing-concert",
         title: "Sound Beyond the Ordinary — C. Bechstein Century-Old Masterpiece Unveiling Concert",
         date: "2026-05-23",

@@ -3,6 +3,12 @@
   "past": "Past",
   "noUpcomingEvents": "No upcoming events — check back soon!",
 
+  "shanghai-bank-concert": {
+    "title": "Shanghai Commercial Bank Piano Concert",
+    "displayDate": "June 3, 2026",
+    "venue": "",
+    "description": ""
+  },
   "unboxing-concert": {
     "title": "Sound Beyond the Ordinary — C. Bechstein Century-Old Masterpiece Unveiling Concert",
     "displayDate": "May 23, 2026, 2:00 PM",

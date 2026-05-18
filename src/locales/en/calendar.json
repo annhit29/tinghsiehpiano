@@ -3,6 +3,18 @@
   "past": "Past",
   "noUpcomingEvents": "No upcoming events — check back soon!",
 
+  "chopin-openair-26": {
+    "title": "Open-air Chopin concert",
+    "displayDate": "November 14, 2026",
+    "venue": "Venue: TBA",
+    "description": ""
+  },
+  "recital-oct26": {
+    "title": "Piano Solo Recital",
+    "displayDate": "October 29, 2026",
+    "venue": "Venue: TBA",
+    "description": ""
+  },
   "shanghai-bank-concert": {
     "title": "Shanghai Commercial Bank Piano Concert",
     "displayDate": "June 3, 2026",

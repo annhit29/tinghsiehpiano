@@ -20,11 +20,31 @@ interface CalendarEvent {
 
 const events: CalendarEvent[] = [
     {
+        id: "chopin-openair-26",
+        title: "Open-air Chopin concert",
+        date: "2026-11-14",
+        displayDate: "November 14, 2026",
+        venue: "Venue: TBA",
+        description: "",
+        href: "",
+        bgText: "Schedule3",
+    },
+    {
+        id: "recital-oct26",
+        title: "Piano Solo Recital",
+        date: "2026-10-29",
+        displayDate: "October 29, 2026",
+        venue: "Venue: TBA",
+        description: "",
+        href: "",
+        bgText: "Schedule3",
+    },
+    {
         id: "shanghai-bank-concert",
         title: "Shanghai Commercial Bank Piano Concert",
         date: "2026-06-03",
         displayDate: "June 3, 2026",
-        venue: "",
+        venue: "Venue: TBA",
         description: "",
         href: "",
         bgText: "Schedule3",

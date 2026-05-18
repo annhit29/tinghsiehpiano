@@ -51,6 +51,16 @@ const events: CalendarEvent[] = [
         bgText: "Schedule3",
     },
     {
+        id: "asia-aegean-music",
+        title: "2026 Asian Aegean International Piano Master Class and Music Camp",
+        date: "2026-08-06",
+        displayDate: "August 3 - 6, 2026",
+        venue: "Department of Music, Song Yi Hall, Soochow University",
+        description: "",
+        href: "",
+        bgText: "Schedule3",
+    },
+    {
         id: "shanghai-bank-concert",
         title: "Shanghai Commercial Bank Piano Concert",
         date: "2026-06-03",

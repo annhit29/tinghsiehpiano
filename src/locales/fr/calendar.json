@@ -3,6 +3,12 @@
   "past": "Passés",
   "noUpcomingEvents": "Pas d'événements à venir — revenez bientôt !",
 
+  "chamber-music": {
+    "title": "Concert de musique de chambre",
+    "displayDate": "30 novembre 2026",
+    "venue": "Salle de concert nationale de Taïwan",
+    "description": ""
+  },
   "chopin-openair-26": {
     "title": "Concert Chopin en plein air",
     "displayDate": "14 novembre 2026",

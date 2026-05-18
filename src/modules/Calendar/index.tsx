@@ -19,6 +19,17 @@ interface CalendarEvent {
 }
 
 const events: CalendarEvent[] = [
+
+    {
+        id: "chamber-music",
+        title: "Chamber Music Performance",
+        date: "2026-11-30",
+        displayDate: "November 30, 2026",
+        venue: "National Taiwan Concert Hall",
+        description: "",
+        href: "",
+        bgText: "Schedule3",
+    },
     {
         id: "chopin-openair-26",
         title: "Open-air Chopin concert",

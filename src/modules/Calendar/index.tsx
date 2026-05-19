@@ -45,7 +45,7 @@ const events: CalendarEvent[] = [
         title: "Piano Solo Recital",
         date: "2026-10-29",
         displayDate: "October 29, 2026",
-        venue: "Venue: TBA",
+        venue: "National Taiwan Concert Hall",
         description: "",
         href: "",
         bgText: "Schedule3",

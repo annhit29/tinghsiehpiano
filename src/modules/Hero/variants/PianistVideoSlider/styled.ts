@@ -34,11 +34,14 @@ export const PianistVideoSliderHeading = styled.div`
 `;
 
 export const VideoTitle = styled.div`
+    width: 100%;
+    max-width: 48rem; // match the video frame width so the title lines up with it
     color: ${Theme.secondary};
     font-size: clamp(20px, 2vw, 24px); // Responsive font-size: the font-size is at least 20px, and at most 24px, and scales dynamically with the viewport width (2% of the viewport width). This 2% makes the font-size responsive to screen size.
     font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 10px;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 18px;
 `;
 
 export const PianistVideoSliderStyled = styled.div`
@@ -84,58 +87,120 @@ export const VideoSlide = styled.div`
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
-
-    // iframe {
-    //     margin-top: 20px;
-    // }
 `;
 
-export const Thumbnail = styled.div`
+// The framed video area: a single rounded, shadowed box that holds either the
+// poster or the playing iframe. aspect-ratio keeps it a clean 16:9 at any width.
+export const VideoFrame = styled.div`
     position: relative;
-    cursor: pointer;
     width: 100%;
-    height: calc(100vw * 9 / 16); // 16:9 aspect ratio
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    
+    max-width: 48rem;
+    aspect-ratio: 16 / 9;
+    border-radius: 20px;
+    overflow: hidden;
+    background: ${Theme.secondary};
+    box-shadow: 0 22px 45px -20px rgba(16, 17, 24, 0.5);
+
+    ${MediaQuery.max("lg")} {
+        border-radius: 14px;
+    }
+`;
+
+// Poster shown before playback. It's a plain image (not an iframe), so the slider
+// stays swipeable across it on touch screens.
+export const VideoThumbnailButton = styled.button`
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: block;
+
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        display: block;
+        transition: transform 600ms ease;
+    }
+
+    // Soft veil for depth and play-button contrast; deepens slightly on hover.
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            180deg,
+            rgba(16, 17, 24, 0.05) 0%,
+            rgba(16, 17, 24, 0.35) 100%
+        );
+        transition: background 300ms ease;
+    }
+
+    &:hover img {
+        transform: scale(1.04);
+    }
+
+    &:hover::after {
+        background: linear-gradient(
+            180deg,
+            rgba(16, 17, 24, 0.1) 0%,
+            rgba(16, 17, 24, 0.45) 100%
+        );
+    }
+
+    &:hover .play-button {
+        transform: translate(-50%, -50%) scale(1.08);
+        background: #ffffff;
     }
 `;
 
-export const PlayButton = styled.div`
+export const PlayButton = styled.span`
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
     display: flex;
-    justify-content: center;
     align-items: center;
-    z-index: 1;
-    
+    justify-content: center;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 8px 22px rgba(16, 17, 24, 0.35);
+    transition: transform 250ms ease, background 250ms ease;
+
+    // The play triangle.
     &::before {
         content: "";
-        border-left: 20px solid #fff;
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        margin-left: 5px;
+        margin-left: 6px;
+        border-left: 22px solid ${Theme.secondary};
+        border-top: 13px solid transparent;
+        border-bottom: 13px solid transparent;
+    }
+
+    ${MediaQuery.max("lg")} {
+        width: 62px;
+        height: 62px;
+
+        &::before {
+            margin-left: 5px;
+            border-left: 18px solid ${Theme.secondary};
+            border-top: 11px solid transparent;
+            border-bottom: 11px solid transparent;
+        }
     }
 `;
 
-export const ResponsiveIframe = styled.iframe`
-    width: 100%; // Make the iframe responsive with height: 400px
-    height:calc(100vw * (9 / 16)); // 16:9 aspect ratio wrt the viewport width (100vw), of the iframe 
-    max-width: 46rem; // Limit the maximum width, for better readability
-    max-height: 26rem; // Limit the maximum height, for better readability
-    border: none; // Remove iframe borders
+export const PlayingIframe = styled.iframe`
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 `;
-
-// todo: cont: ask chatGPT on conversation https://chatgpt.com/c/5115a22e-9804-4108-b9f2-9d6ff0a73573
-// 1) SlideNavLeft and SlideNavRight should be transparent when one of them is onSlideChange
-// 2) SlideNavLeft and SlideNavRight should be semi-transparent when isLeftDisabled OR isRightDisabled OR both are true.
-// 3) later: add play button

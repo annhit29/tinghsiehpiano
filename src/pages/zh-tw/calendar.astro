@@ -1,0 +1,38 @@
+---
+import { changeLanguage } from "i18next";
+import i18next, {t} from "i18next";
+import { PianistSlider1 } from "@static/images";
+import Layout from "../../layouts/Layout.astro";
+import { Calendar as CalendarModule } from "@modules/Calendar";
+import { Pianist } from "@modules/Hero";
+import { Footer } from "@modules/Footer";
+
+changeLanguage("zh-tw");
+---
+
+<!-- todo: add meta description for SEO -->
+
+<Layout
+    title="謝維庭 鋼琴家 | 演出行事曆"
+    description="台灣鋼琴家謝維庭近期演出資訊"
+    lang="zh-TW"
+>
+    <main class="page-content">
+        <Pianist
+            pianistType="ParallaxImage"
+            client:load
+            data={{
+                image: PianistSlider1.src,
+                content: {
+                    title: "演出行事曆",
+                    paragraph: "接下來有什麼活動呢？點擊演出方塊查看！",
+                },
+            }}
+        />
+
+        <CalendarModule client:load />
+    </main>
+
+    <!-- the footer of calendar.astro's page: -->
+    <Footer client:load />
+</Layout>

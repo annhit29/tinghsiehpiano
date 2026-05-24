@@ -1,0 +1,37 @@
+---
+import { changeLanguage } from "i18next";
+import { PianistSlider3 } from "@static/images";
+import Layout from "../../layouts/Layout.astro";
+import { Biography as BiographyModule } from "@modules/Biography";
+import { Pianist } from "@modules/Hero";
+import { Footer } from "@modules/Footer";
+
+changeLanguage("zh-tw");
+---
+
+<!-- todo: add meta description for SEO -->
+
+<Layout
+    title="謝維庭 鋼琴家 | 簡介"
+    description="台灣鋼琴家謝維庭簡介"
+    lang="zh-TW"
+>
+    <main class="page-content">
+        <Pianist
+            pianistType="ParallaxImage"
+            client:load
+            data={{
+                image: PianistSlider3.src,
+                content: {
+                    title: "簡介",
+                    paragraph:
+                        "關於謝維庭",
+                },
+            }}
+        />
+
+        <BiographyModule client:load />
+    </main>
+
+    <Footer client:load />
+</Layout>

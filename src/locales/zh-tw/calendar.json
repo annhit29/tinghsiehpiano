@@ -1,0 +1,90 @@
+{
+  "upcoming": "近期演出",
+  "past": "過往演出",
+  "noUpcomingEvents": "目前沒有近期演出，敬請期待！",
+
+  "chamber-music": {
+    "title": "室內樂音樂會",
+    "displayDate": "2026 年 11 月 30 日",
+    "venue": "國家演奏廳",
+    "description": ""
+  },
+  "chopin-openair-26": {
+    "title": "蕭邦戶外音樂會",
+    "displayDate": "2026 年 11 月 14 日",
+    "venue": "場地：待公布",
+    "description": ""
+  },
+  "recital-oct26": {
+    "title": "鋼琴獨奏會",
+    "displayDate": "2026 年 10 月 29 日",
+    "venue": "國家音樂廳",
+    "description": ""
+  },
+  "asia-aegean-music": {
+    "title": "2026 亞洲愛琴海國際鋼琴大師班暨音樂營",
+    "displayDate": "2026 年 8 月 3 日至 6 日",
+    "venue": "東吳大學音樂系 松怡廳",
+    "description": "點我看更多！"
+  },
+  "shanghai-bank-concert": {
+    "title": "上海商業儲蓄銀行鋼琴音樂會",
+    "displayDate": "2026 年 6 月 3 日",
+    "venue": "場地：待公布",
+    "description": ""
+  },
+  "unboxing-concert": {
+    "title": "非凡之聲 — C. Bechstein 百年名琴開箱音樂會",
+    "displayDate": "2026 年 5 月 23 日 下午 2:00",
+    "venue": "雲林表演廳",
+    "description": "點我看更多！"
+  },
+  "palermo-classica": {
+    "title": "巴勒摩古典鋼琴獨奏會（Palermo Classica）",
+    "displayDate": "2026 年 4 月 5 日",
+    "venue": "Complesso Monumentale dello Steri",
+    "description": "在平衡與風暴之間 — 莫札特與舒曼"
+  },
+  "university-130": {
+    "title": "國立臺北教育大學 130 週年校慶音樂會",
+    "displayDate": "2025 年 12 月 2 日",
+    "venue": "國家音樂廳",
+    "description": "蕭邦第二號鋼琴協奏曲"
+  },
+  "chopin-openair": {
+    "title": "蕭邦戶外音樂會",
+    "displayDate": "2025 年 11 月 16 日",
+    "venue": "大安森林公園",
+    "description": "點我看演出曲目！"
+  },
+  "masterclass-aug25": {
+    "title": "鋼琴大師班",
+    "displayDate": "2025 年 8 月 23 日",
+    "venue": "TT Music Space",
+    "description": "演奏蕭邦"
+  },
+  "recital-jan25": {
+    "title": "鋼琴獨奏會",
+    "displayDate": "2025 年 1 月 25 日",
+    "venue": "國家音樂廳",
+    "description": "點我看演出曲目！"
+  },
+  "recital-feb25": {
+    "title": "鋼琴獨奏會",
+    "displayDate": "2025 年 2 月 8 日",
+    "venue": "臺中國家歌劇院",
+    "description": "點我看演出曲目！"
+  },
+  "recital-sep24": {
+    "title": "鋼琴獨奏會",
+    "displayDate": "2024 年 9 月 9 日",
+    "venue": "德國漢諾威",
+    "description": "點我看演出曲目！"
+  },
+  "ntue-oct24": {
+    "title": "國立臺北教育大學音樂會",
+    "displayDate": "2024 年 10 月 15 日",
+    "venue": "國家音樂廳",
+    "description": "巴爾托克：雙鋼琴協奏曲"
+  }
+}

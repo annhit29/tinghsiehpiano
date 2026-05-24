@@ -1,0 +1,46 @@
+---
+import { changeLanguage } from "i18next";
+import { ContentSection } from "@modules/ContentSection";
+import Layout from "../../layouts/Layout.astro";
+import { FadeIn } from "@utils/animations/FadeIn";
+import { Button } from "@components/Button";
+
+changeLanguage("zh-tw");
+---
+
+<Layout
+    title="404 | 找不到頁面"
+    description="您所尋找的頁面可能已被移除、名稱已變更，或暫時無法使用。"
+    lang="zh-TW"
+>
+    <main class="page-content page-404">
+        <ContentSection
+            style={{
+                maxWidth: "600px",
+                margin: "0 auto",
+                textAlign: "center",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100%",
+            }}
+        >
+            <FadeIn client:visible>
+                <h1>Wooops - Soory! 404</h1>
+                <p>
+                    您所尋找的頁面可能已被移除、名稱已變更，或暫時無法使用。
+                </p>
+
+                <Button
+                    variant="secondary"
+                    showIcon={false}
+                    link="/zh-tw"
+                    align="center"
+                >
+                    返回首頁
+                </Button>
+            </FadeIn>
+        </ContentSection>
+    </main>
+</Layout>

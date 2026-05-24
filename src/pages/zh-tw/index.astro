@@ -1,0 +1,46 @@
+---
+import { changeLanguage } from "i18next";
+import { PianistSlider1, PianistSlider2 } from "@static/images";
+import Layout from "../../layouts/Layout.astro";
+import { Pianist } from "@modules/Hero";
+
+changeLanguage("zh-tw");
+---
+
+<!-- the highest level of the page, the homepage. -->
+
+<Layout
+    title="謝維庭"
+    description="台灣鋼琴家謝維庭官方網站首頁"
+    lang="zh-TW"
+>
+    <main class="page-content">
+        <Pianist
+            client:load
+            pianistType="fullPageSlider"
+            data={[
+                {
+                    subtitle: "鋼琴家",
+                    title: "謝維庭",
+                    background: PianistSlider1.src,
+                    // paragraph:
+                    //     "",
+                    button: {
+                        text: "謝維庭",
+                        link: "/zh-tw/biography",
+                    },
+                },
+                {
+                    subtitle: "鋼琴家",
+                    title: "謝維庭",
+                    background: PianistSlider2.src,
+                    paragraph: "盡情聆賞",
+                    button: {
+                        text: "聆聽",
+                        link: "/zh-tw/music",
+                    },
+                },
+            ]}
+        />
+    </main>
+</Layout>

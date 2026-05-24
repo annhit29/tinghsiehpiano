@@ -1,0 +1,36 @@
+---
+import { changeLanguage } from "i18next";
+import { PianistSlider4 } from "@static/images";
+import Layout from "../../layouts/Layout.astro";
+import { Contact as ContactModule } from "@modules/Contact";
+import { Pianist } from "@modules/Hero";
+import { Footer } from "@modules/Footer";
+
+changeLanguage("zh-tw");
+---
+
+<!-- todo: add meta description for SEO -->
+
+<Layout
+    title="謝維庭 鋼琴家 | 聯絡"
+    description="聯絡台灣鋼琴家謝維庭"
+    lang="zh-TW"
+>
+    <main class="page-content">
+        <Pianist
+            pianistType="ParallaxImage"
+            client:load
+            data={{
+                image: PianistSlider4.src,
+                content: {
+                    title: "聯絡",
+                    paragraph:
+                        "歡迎與我聯繫！",
+                },
+            }}
+        />
+
+        <ContactModule client:load />
+    </main>
+    <Footer client:load />
+</Layout>

@@ -1,0 +1,68 @@
+---
+import { changeLanguage } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import { Pianist } from "@modules/Hero";
+import { PianistSlider2 } from "@static/images";
+import { MusicCards } from "@modules/MusicCards";
+import { PianistVideoSlider } from "@modules/Hero/variants/PianistVideoSlider/PianistVideoSlider";
+import { Footer } from "@modules/Footer";
+
+changeLanguage("zh-tw");
+---
+
+<Layout
+    title="謝維庭 鋼琴家 | 音樂"
+    description="台灣鋼琴家謝維庭的音樂"
+    lang="zh-TW"
+>
+    <main class="page-content">
+        <Pianist
+            pianistType="ParallaxImage"
+            client:visible
+            data={{
+                image: PianistSlider2.src,
+                content: {
+                    title: "音樂",
+                    paragraph: "盡情聆賞才華洋溢的鋼琴家謝維庭的音樂。"
+                },
+            }}
+        />
+        <MusicCards
+            description="音樂"
+            title="唱片作品"
+            client:visible
+            cards={[
+                {
+                    title: "Fantasiestücke, Robert Schumann",
+                    description:
+                    `
+                    <iframe
+                        style="border-radius:12px; aspect-ratio: 1; width: clamp(18.5rem, 100%, 37.5rem); height: 352px;" //18.5rem=18.5*16px = "296px" 37.5rem=37.5*16px = "600px", so the clamp is doing: width: 296px if the screen is smaller than 600px, and width: 600px if the screen is bigger than 600px
+                        src="https://open.spotify.com/embed/artist/05P8KWbEcJD8NWTUbAfjpn?utm_source=generator&theme=0"
+                        frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    `,
+                },
+            ]}
+        />
+
+        <PianistVideoSlider
+            title="影片"
+            client:visible
+            videoTitles={
+                [
+                "Wei-Ting HSIEH, J.Ph. Rameau: Le Rappel des Oiseaux",
+                "Wei-Ting HSIEH, second round, 18th Chopin Competition",
+                "Wei-Ting HSIEH, first round, 18th Chopin Competition"
+                ]
+            }
+            videos={[
+                "https://www.youtube.com/embed/I2pEK4Fznw4?si=HYTDUXpJYvseBja5",
+                "https://www.youtube.com/embed/orwTW279nEs?si=xwekzfO9vIfNG0Tf",
+                "https://www.youtube.com/embed/mm9pfniDt_E?si=-gWNbKLGfUUPvpLJ"
+            ]}
+        />
+
+        <!-- todo: might put images music-page-1.webp and music-page-2.webp (see static/images' index.tsx) in the music page later -->
+    </main>
+    <Footer client:load />
+</Layout>

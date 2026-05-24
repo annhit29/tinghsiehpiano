@@ -90,68 +90,6 @@ export const VideoSlide = styled.div`
     // }
 `;
 
-const SlideNav = styled.div`
-    position: absolute;
-    top: 58%; // roughly centered on the video
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 10;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-
-    // Outlined by default: thin ring, dark chevron, transparent fill.
-    color: ${Theme.secondary};
-    background: transparent;
-    border: 1px solid ${Theme.secondary};
-    transition: color 250ms ease, background-color 250ms ease, border-color 250ms ease;
-
-    svg {
-        width: 22px;
-        height: 22px;
-        // Nudge the chevron a hair toward its travel direction for better optical centering.
-        transition: transform 250ms ease;
-    }
-
-    // Fills solid on hover, chevron flips to the panel colour.
-    &:hover {
-        color: ${Theme.primary};
-        background: ${Theme.secondary};
-        border-color: ${Theme.secondary};
-    }
-
-    // Dim (and disable clicks on) the arrow when there is no slide in that direction.
-    &.disabled {
-        opacity: 0.25;
-        pointer-events: none;
-    }
-
-    // On small screens the dots + native swipe are enough; arrows would overlap the video.
-    ${MediaQuery.max("lg")} {
-        display: none;
-    }
-`;
-
-export const SlideNavLeft = styled(SlideNav)`
-    left: 40px;
-
-    &:hover svg {
-        transform: translateX(-2px);
-    }
-`;
-
-export const SlideNavRight = styled(SlideNav)`
-    right: 40px;
-
-    &:hover svg {
-        transform: translateX(2px);
-    }
-`;
-
 export const Thumbnail = styled.div`
     position: relative;
     cursor: pointer;

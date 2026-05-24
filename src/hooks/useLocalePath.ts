@@ -1,19 +1,19 @@
 import { useState, useEffect, useCallback } from "react";
+import { detectLocale, DEFAULT_LOCALE } from "../locales/config";
 
 export function useLocalePath() {
-  const [prefix, setPrefix] = useState("");
+  const [locale, setLocale] = useState(DEFAULT_LOCALE);
 
   useEffect(() => {
-    if (window.location.pathname.startsWith("/fr")) {
-      setPrefix("/fr");
-    }
+    setLocale(detectLocale(window.location.pathname));
   }, []);
 
   return useCallback(
     (path: string) => {
-      if (path === "/") return prefix || "/";
-      return `${prefix}${path}`;
+      if (locale === DEFAULT_LOCALE) return path;
+      if (path === "/") return `/${locale}`;
+      return `/${locale}${path}`;
     },
-    [prefix]
+    [locale]
   );
 }

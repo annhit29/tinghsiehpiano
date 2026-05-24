@@ -4,6 +4,7 @@ import { TextBox } from "@components/textBox";
 
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n";
+import { detectLocale } from "../../locales/config";
 
 // Calendar component is for calendar.astro
 
@@ -168,8 +169,7 @@ export const Calendar: FC = () => {
 
     // Always sync i18n language with URL path on mount
     useEffect(() => {
-        const path = window.location.pathname;
-        const lang = path.startsWith("/fr") ? "fr" : "en";
+        const lang = detectLocale(window.location.pathname);
         if (i18n.language !== lang) {
             i18n.changeLanguage(lang);
         }

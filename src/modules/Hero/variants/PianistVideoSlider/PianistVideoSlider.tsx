@@ -4,10 +4,27 @@ import { type FC, useState } from "react";
 import * as S from "./styled";
 import { SwiperSlider } from "@components/SwiperSlider";
 import { Pagination, Navigation } from "swiper/modules";
-import { Icon } from "@static/icons";
 import { Container } from "@components/Container";
 
 // PianistVideoSlider component is a slider that displays videos which uses SwiperSlider component to create the slider.
+
+// Slim, hand-drawn chevron (thin stroke, rounded caps) — replaces the cheap icon asset.
+// `currentColor` lets the chevron follow the button's text colour, so it can flip to white on hover.
+const Chevron: FC<{ direction: "left" | "right" }> = ({ direction }) => (
+    <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+    >
+        <polyline points={direction === "left" ? "14 6 8 12 14 18" : "10 6 16 12 10 18"} />
+    </svg>
+);
 
 export type PianistVideoSliderProps = {
     title?: string; // Title of the video section
@@ -45,7 +62,8 @@ export const PianistVideoSlider: FC<PianistVideoSliderProps> = ({ title, videoTi
                     },
                     pagination: {
                         el: ".swiper-pagination",
-                        type: "progressbar",
+                        type: "bullets",
+                        clickable: true,
                     },
                     on: {
                         slideChange: (swiper) => setCurrentSlide(swiper.activeIndex),
@@ -72,12 +90,22 @@ export const PianistVideoSlider: FC<PianistVideoSliderProps> = ({ title, videoTi
                             </S.VideoSlide>
                 ))}
             </SwiperSlider>
-            {/* <S.SlideNavLeft className={`swiper-button-prev ${isLeftDisabled ? 'disabled' : ''}`}>
-                <Icon iconData="arrowLeftDark" alt="left arrow" />
-            </S.SlideNavLeft>
-            <S.SlideNavRight className={`swiper-button-next ${isRightDisabled ? 'disabled' : ''}`}>
-                <Icon iconData="arrowRightDark" alt="right arrow" />
-            </S.SlideNavRight> */}
+            {videos.length > 1 && (
+                <>
+                    <S.SlideNavLeft
+                        className={`swiper-button-prev ${isLeftDisabled ? 'disabled' : ''}`}
+                        aria-label="Previous video"
+                    >
+                        <Chevron direction="left" />
+                    </S.SlideNavLeft>
+                    <S.SlideNavRight
+                        className={`swiper-button-next ${isRightDisabled ? 'disabled' : ''}`}
+                        aria-label="Next video"
+                    >
+                        <Chevron direction="right" />
+                    </S.SlideNavRight>
+                </>
+            )}
             <div className="swiper-pagination"></div>
             </Container>
             </S.VideoCardsStyled>

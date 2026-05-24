@@ -45,6 +45,37 @@ export const PianistVideoSliderStyled = styled.div`
     position: relative;
     width: 100%;
     height: auto;
+
+    /* Dot indicators: one dot per video so it's obvious there are several to swipe through. */
+    .swiper-pagination {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-top: 8px;
+        margin-bottom: 40px;
+
+        .swiper-pagination-bullet {
+            display: block;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: ${Theme.secondary};
+            opacity: 0.3;
+            cursor: pointer;
+            transition: opacity 200ms ease, transform 200ms ease;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            transform: scale(1.25);
+        }
+    }
 `;
 
 export const VideoSlide = styled.div`
@@ -59,29 +90,65 @@ export const VideoSlide = styled.div`
     // }
 `;
 
-export const SlideNavLeft = styled.div`
-    position: absolute; // Absolute position
-    top: 60%; // 60% from the top
-    left: 120px; // 120px from the left
-    transform: translateY(-50%); // Center vertically
-    cursor: pointer;
-    z-index: 10;
-
-    &.disabled svg {
-        fill: rgba(0, 0, 0, 0.5); // Semi-transparent when disabled
-    }
-`;
-
-export const SlideNavRight = styled.div`
+const SlideNav = styled.div`
     position: absolute;
-    top: 60%;
-    right: 120px;
+    top: 58%; // roughly centered on the video
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 10;
 
-    &.disabled svg {
-        fill: rgba(0, 0, 0, 0.5); // Semi-transparent when disabled
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+
+    // Outlined by default: thin ring, dark chevron, transparent fill.
+    color: ${Theme.secondary};
+    background: transparent;
+    border: 1px solid ${Theme.secondary};
+    transition: color 250ms ease, background-color 250ms ease, border-color 250ms ease;
+
+    svg {
+        width: 22px;
+        height: 22px;
+        // Nudge the chevron a hair toward its travel direction for better optical centering.
+        transition: transform 250ms ease;
+    }
+
+    // Fills solid on hover, chevron flips to the panel colour.
+    &:hover {
+        color: ${Theme.primary};
+        background: ${Theme.secondary};
+        border-color: ${Theme.secondary};
+    }
+
+    // Dim (and disable clicks on) the arrow when there is no slide in that direction.
+    &.disabled {
+        opacity: 0.25;
+        pointer-events: none;
+    }
+
+    // On small screens the dots + native swipe are enough; arrows would overlap the video.
+    ${MediaQuery.max("lg")} {
+        display: none;
+    }
+`;
+
+export const SlideNavLeft = styled(SlideNav)`
+    left: 40px;
+
+    &:hover svg {
+        transform: translateX(-2px);
+    }
+`;
+
+export const SlideNavRight = styled(SlideNav)`
+    right: 40px;
+
+    &:hover svg {
+        transform: translateX(2px);
     }
 `;
 

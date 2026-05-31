@@ -22,16 +22,38 @@ const metaData = {
         description: description,
         image: preview,
     },
-    // twitter: {
-    //     card: "summary_large_image",
-    //     title: title,
-    //     description: description,
-    //     image: preview,
-    //     domain: siteUrl,
-    //     url: siteUrl,
-    // },
+    twitter: {
+        card: "summary_large_image",
+        title: title,
+        description: description,
+        image: preview,
+        domain: siteUrl,
+        url: siteUrl,
+    },
 };
-console.log('MetaConfig props:', { siteUrl, title, description, preview });
+
+// Person structured data (JSON-LD) — tells Google who this site is about and
+// links her official profiles (sameAs) so they're recognised as one identity.
+// This powers name searches / the Google knowledge panel.
+const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Wei-Ting Hsieh",
+    alternateName: "謝維庭",
+    jobTitle: "Pianist",
+    nationality: "Taiwanese",
+    url: siteUrl,
+    image: new URL(preview, siteUrl).href,
+    sameAs: [
+        "https://www.instagram.com/weitingpianist/",
+        "https://www.threads.com/@weitingpianist",
+        "https://www.facebook.com/pianistweitinghsieh/",
+        "https://www.facebook.com/ting.hsieh.79/",
+        "https://open.spotify.com/artist/05P8KWbEcJD8NWTUbAfjpn",
+        "https://music.apple.com/gb/artist/wei-ting-hsieh/1438982345",
+        "https://www.knsclassical.com/artist/wei-ting-hsieh/",
+    ],
+};
 
 ---
 
@@ -70,10 +92,13 @@ console.log('MetaConfig props:', { siteUrl, title, description, preview });
 <meta property="og:description" content={metaData.default.description} />
 <meta property="og:image" content={metaData.default.image as string} />
 
-<!-- twitter ones
+<!-- twitter ones -->
 <meta name="twitter:card" content={metaData.twitter.card} />
 <meta name="twitter:title" content={metaData.twitter.title} />
 <meta name="twitter:description" content={metaData.twitter.description} />
 <meta name="twitter:image" content={metaData.twitter.image as string} />
 <meta property="twitter:domain" content={metaData.twitter.domain} />
-<meta property="twitter:url" content={metaData.twitter.url} /> -->
+<meta property="twitter:url" content={metaData.twitter.url} />
+
+<!-- Person structured data (JSON-LD) for rich results / knowledge panel -->
+<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />

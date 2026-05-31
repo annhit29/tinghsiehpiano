@@ -49,12 +49,7 @@ export default defineConfig({
             },
         }), // Sitemap integration
     ],
-    renderers: ["@astrojs/renderer-react"],
-    prerender: true,
     vite: {
         plugins: [CompressionPlugin()],
-    },
-    buildOptions: {
-        minify: true,
     },
 });

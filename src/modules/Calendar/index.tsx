@@ -66,9 +66,9 @@ const events: CalendarEvent[] = [
         title: "Shanghai Commercial Bank Piano Concert",
         date: "2026-06-03",
         displayDate: "June 3, 2026",
-        venue: "Venue: TBA",
-        description: "",
-        href: "",
+        venue: "Shanghai Bank Building 2nd Floor Multipurpose Hall (臺北市中山區民權東路一段2號)",
+        description: "Click me to see more!",
+        href: "https://www.scsbfund.org.tw/paper_detail524_1.htm",
         bgText: "Schedule3",
     },
     {

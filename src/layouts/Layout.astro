@@ -28,7 +28,10 @@ const enHref = new URL(basePath, Astro.site).href;
 const alternates = [
     { hreflang: "en", href: enHref },
     { hreflang: "fr", href: localizedHref("/fr") },
+    // zh-TW targets Taiwan specifically; bare "zh" is the region-independent
+    // fallback so Chinese readers anywhere (HK, SG, Malaysia, overseas) get this page too.
     { hreflang: "zh-TW", href: localizedHref("/zh-tw") },
+    { hreflang: "zh", href: localizedHref("/zh-tw") },
     { hreflang: "x-default", href: enHref },
 ];
 ---

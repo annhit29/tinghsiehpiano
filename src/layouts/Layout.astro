@@ -13,6 +13,9 @@ interface Props {
 }
 
 const { title, description, lang = "en", overwritePreview } = Astro.props;
+
+// Canonical URL for THIS page (its own path), built from the configured `site`.
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <!-- 
@@ -30,7 +33,7 @@ const { title, description, lang = "en", overwritePreview } = Astro.props;
         />
         <title>{title}</title>
         <meta name="description" content={description} />
-        <link rel="canonical" href="https://www.tinghsiehpiano.com" />
+        <link rel="canonical" href={canonicalURL} />
         <Global styles={NormalizeCSS} />
 
         <script>

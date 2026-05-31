@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 
 // Set siteUrl dynamically based on environment variables:
 const isProduction = process.env.NODE_ENV === 'production';
-const siteUrl = isProduction ? 'https://www.tinghsiehpiano.com' : process.env.URL || 'http://localhost:4321';
+const siteUrl = isProduction ? 'https://tinghsiehpiano.com' : process.env.URL || 'http://localhost:4321';
 
 console.log('siteUrl:', siteUrl);
 
@@ -15,7 +15,7 @@ export { siteUrl };
 const date = new Date().toISOString();
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://www.tinghsiehpiano.com', //siteUrl, //+ "/", // the URL of my website
+    site: 'https://tinghsiehpiano.com', //siteUrl, //+ "/", // the URL of my website
     trailingSlash: 'never',  // This ensures all URLs don't have a trailing slash
 
     // added integrations:
@@ -29,10 +29,10 @@ export default defineConfig({
                 item.changefreq = "weekly";
                 item.lastmod = date;
 
-                // if you want to exclude a page from the sitemap, do it here
-                // if (/exclude-from-sitemap/.test(item.url)) {
-                //     return undefined;
-                // }
+                // Exclude error pages from the sitemap
+                if (/\/404$/.test(item.url)) {
+                    return undefined;
+                }
 
                 // if any page needs a different priority, changefreq, or lastmod, uncomment the following lines and adjust as needed
                 // if (/test-sitemap/.test(item.url)) {

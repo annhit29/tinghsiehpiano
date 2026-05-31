@@ -16,6 +16,21 @@ const { title, description, lang = "en", overwritePreview } = Astro.props;
 
 // Canonical URL for THIS page (its own path), built from the configured `site`.
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+
+// hreflang alternates: the same page in each language so Google serves the
+// right one per the user's locale. Derive the locale-agnostic path, then
+// rebuild it under each language prefix (en lives at the root).
+const localeMatch = Astro.url.pathname.match(/^\/(zh-tw|fr)(\/.*)?$/);
+const basePath = localeMatch ? localeMatch[2] || "/" : Astro.url.pathname;
+const localizedHref = (prefix: string) =>
+    new URL(prefix + (basePath === "/" ? "" : basePath), Astro.site).href;
+const enHref = new URL(basePath, Astro.site).href;
+const alternates = [
+    { hreflang: "en", href: enHref },
+    { hreflang: "fr", href: localizedHref("/fr") },
+    { hreflang: "zh-TW", href: localizedHref("/zh-tw") },
+    { hreflang: "x-default", href: enHref },
+];
 ---
 
 <!-- 
@@ -34,6 +49,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
         <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={canonicalURL} />
+        {
+            alternates.map((alt) => (
+                <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+            ))
+        }
         <Global styles={NormalizeCSS} />
 
         <script>

@@ -49,10 +49,6 @@ export const TextBotBgText = styled.span`
 export const TextBotTextWrapper = styled.div`
     position: relative;
     z-index: 2;
-
-    ${MediaQuery.max("md")} {
-        max-width: 80%;
-    }
 `;
 
 const TextBoxBackgroundTextVariant = css`

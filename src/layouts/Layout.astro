@@ -10,9 +10,10 @@ interface Props {
     description: string;
     lang?: string;
     overwritePreview?: string;
+    noindex?: boolean;
 }
 
-const { title, description, lang = "en", overwritePreview } = Astro.props;
+const { title, description, lang = "en", overwritePreview, noindex = false } = Astro.props;
 
 // Canonical URL for THIS page (its own path), built from the configured `site`.
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
@@ -48,14 +49,18 @@ const alternates = [
             title={title}
             description={description}
             preview={overwritePreview ? overwritePreview : PreviewPng.src}
+            noindex={noindex}
         />
         <title>{title}</title>
         <meta name="description" content={description} />
-        <link rel="canonical" href={canonicalURL} />
+        {/* Error/noindex pages declare neither a canonical nor language
+            alternates: there's no "correct" version of a 404 to point at. */}
+        {!noindex && <link rel="canonical" href={canonicalURL} />}
         {
-            alternates.map((alt) => (
-                <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
-            ))
+            !noindex &&
+                alternates.map((alt) => (
+                    <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+                ))
         }
         <Global styles={NormalizeCSS} />
 

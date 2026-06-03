@@ -6,15 +6,28 @@ interface Props {
     description: string;
     preview: string;
     noindex?: boolean;
+    canonical?: string;
+    lang?: string;
 }
 
-const { title = 'Default Title', description = 'Default Description', preview = '/default-preview.png', noindex = false } = Astro.props;
+const { title = 'Default Title', description = 'Default Description', preview = '/default-preview.png', noindex = false, canonical = siteUrl, lang = 'en' } = Astro.props;
 
 // Social platforms (Facebook, X, WhatsApp, LINE, LinkedIn) require an ABSOLUTE
 // image URL for the share-preview card. `preview` is a build-relative path
 // (/_astro/…), so resolve it against the site origin here. (new URL leaves an
 // already-absolute URL untouched.)
 const absImage = new URL(preview, siteUrl).href;
+
+// og:url MUST be this page's own URL, not the homepage. Facebook treats og:url
+// as the canonical content address: if every page points at the homepage,
+// sharing any sub-page (or any language) collapses to the English homepage card.
+const pageUrl = canonical;
+
+// Tell Facebook which language THIS page is in (and which others exist), so the
+// right localized card is shown. Maps our route langs to Open Graph locale codes.
+const ogLocaleMap: Record<string, string> = { en: "en_US", "zh-TW": "zh_TW", fr: "fr_FR" };
+const ogLocale = ogLocaleMap[lang] ?? "en_US";
+const ogLocaleAlternates = Object.values(ogLocaleMap).filter((l) => l !== ogLocale);
 
 /**
  * keep whole metadata in one place
@@ -23,7 +36,7 @@ const metaData = {
     keywords:
         "Wei-Ting Hsieh, Wei-Ting, Wei-Ting Hsieh pianist, Wei-Ting pianist, pianist Wei-Ting Hsieh, 謝維庭, 謝維庭 鋼琴家, 鋼琴家謝維庭, 台灣鋼琴家, 谢维庭, 谢维庭 钢琴家, Taiwanese pianist, classical pianist, concert pianist, pianiste taïwanaise, piano, classical piano, pianist",
     default: {
-        url: siteUrl,
+        url: pageUrl,
         type: "website",
         title: title,
         description: description,
@@ -34,8 +47,8 @@ const metaData = {
         title: title,
         description: description,
         image: absImage,
-        domain: siteUrl,
-        url: siteUrl,
+        domain: new URL(siteUrl).hostname,
+        url: pageUrl,
     },
 };
 
@@ -100,6 +113,10 @@ const personSchema = {
 <meta property="og:title" content={metaData.default.title} />
 <meta property="og:description" content={metaData.default.description} />
 <meta property="og:image" content={metaData.default.image as string} />
+<meta property="og:locale" content={ogLocale} />
+{ogLocaleAlternates.map((l) => (
+    <meta property="og:locale:alternate" content={l} />
+))}
 
 <!-- twitter ones -->
 <meta name="twitter:card" content={metaData.twitter.card} />

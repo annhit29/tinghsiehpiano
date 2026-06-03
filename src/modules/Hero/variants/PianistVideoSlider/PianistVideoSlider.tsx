@@ -24,7 +24,7 @@ const getYouTubeId = (url: string): string => {
 const withAutoplay = (url: string): string =>
     `${url}${url.includes("?") ? "&" : "?"}autoplay=1`;
 
-// One slide. It shows a poster (thumbnail + play button) first — a poster is a plain
+// One slide. It shows a poster (thumbnail + play button) first: a poster is a plain
 // image, so the carousel can be swiped across it on touch devices. The heavy YouTube
 // iframe is only mounted once the user actually presses play.
 const VideoSlideItem: FC<{ videoUrl: string; title?: string; index: number }> = ({
@@ -58,7 +58,7 @@ const VideoSlideItem: FC<{ videoUrl: string; title?: string; index: number }> = 
                             src={`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`}
                             alt={title ?? `Video ${index + 1} thumbnail`}
                             loading="lazy"
-                            // maxres isn't generated for every video — fall back to the always-present hq image.
+                            // maxres isn't generated for every video: fall back to the always-present hq image.
                             onError={(e) => {
                                 e.currentTarget.src = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
                             }}

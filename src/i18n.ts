@@ -3,7 +3,7 @@ import { initReactI18next } from "react-i18next";
 import { detectLocale, DEFAULT_LOCALE } from "./locales/config";
 
 // Import translation files directly so they are bundled (no async HTTP fetching).
-// This ensures translations are available synchronously on first render — no hydration mismatch.
+// This ensures translations are available synchronously on first render: no hydration mismatch.
 import enCalendar from "./locales/en/calendar.json";
 import frCalendar from "./locales/fr/calendar.json";
 import zhCalendar from "./locales/zh-tw/calendar.json";

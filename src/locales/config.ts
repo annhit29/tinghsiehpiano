@@ -8,7 +8,7 @@
 //
 // The language switcher, internal link helper (useLocalePath), and the
 // URL-based language detection all read from this file, so they pick up new
-// languages automatically — no more binary "/fr vs en" checks scattered around.
+// languages automatically: no more binary "/fr vs en" checks scattered around.
 
 export interface LocaleDef {
   /** i18next key AND the URL path segment, e.g. "fr", "zh-tw". Keep it lowercase. */

@@ -3,8 +3,12 @@ import { changeLanguage } from "i18next";
 import { PianistSlider1, PianistSlider2 } from "@static/images";
 import Layout from "../../layouts/Layout.astro";
 import { Pianist } from "@modules/Hero";
+import { responsiveHero } from "@utils/responsiveHero";
 
 changeLanguage("zh-tw");
+
+const slide1 = await responsiveHero(PianistSlider1);
+const slide2 = await responsiveHero(PianistSlider2);
 ---
 
 <!-- the highest level of the page, the homepage. -->
@@ -22,7 +26,8 @@ changeLanguage("zh-tw");
                 {
                     subtitle: "鋼琴家",
                     title: "謝維庭",
-                    background: PianistSlider1.src,
+                    background: slide1.src,
+                    backgroundSrcSet: slide1.srcSet,
                     // paragraph:
                     //     "",
                     button: {
@@ -33,7 +38,8 @@ changeLanguage("zh-tw");
                 {
                     subtitle: "鋼琴家",
                     title: "謝維庭",
-                    background: PianistSlider2.src,
+                    background: slide2.src,
+                    backgroundSrcSet: slide2.srcSet,
                     paragraph: "盡情聆賞",
                     button: {
                         text: "聆聽",

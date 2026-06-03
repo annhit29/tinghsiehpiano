@@ -3,8 +3,12 @@ import { changeLanguage } from "i18next";
 import { PianistSlider1, PianistSlider2 } from "@static/images";
 import Layout from "../layouts/Layout.astro";
 import { Pianist } from "@modules/Hero";
+import { responsiveHero } from "@utils/responsiveHero";
 
 changeLanguage("en");
+
+const slide1 = await responsiveHero(PianistSlider1);
+const slide2 = await responsiveHero(PianistSlider2);
 ---
 
 <!-- the highest level of the page, the homepage. -->
@@ -25,7 +29,8 @@ changeLanguage("en");
                 {
                     subtitle: "Pianist",
                     title: "Wei-Ting HSIEH",
-                    background: PianistSlider1.src,
+                    background: slide1.src,
+                    backgroundSrcSet: slide1.srcSet,
                     // paragraph:
                     //     "",
                     button: {
@@ -36,7 +41,8 @@ changeLanguage("en");
                 {
                     subtitle: "Pianist",
                     title: "Wei-Ting HSIEH",
-                    background: PianistSlider2.src,
+                    background: slide2.src,
+                    backgroundSrcSet: slide2.srcSet,
                     paragraph: "Enjoy the music",
                     button: {
                         text: "Listen",

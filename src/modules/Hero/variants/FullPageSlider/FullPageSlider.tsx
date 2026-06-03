@@ -14,6 +14,7 @@ export type FullPageSliderProps = {
     // content treated as HTML output
     content?: {
         background: string;
+        backgroundSrcSet?: string;
         subtitle?: string;
         title: string;
         paragraph?: string;
@@ -40,7 +41,12 @@ export const FullPageSlider: FC<FullPageSliderProps> = ({ content }) => {
         <S.FullPageSliderSlide key={index} $bgImage={slide.background}>
             {slide.background && (
                 <S.FullPageSliderSlideImg data-swiper-parallax="70%">
-                    <img src={slide.background} alt={slide.title} />
+                    <img
+                        src={slide.background}
+                        srcSet={slide.backgroundSrcSet}
+                        sizes="100vw"
+                        alt={slide.title}
+                    />
                 </S.FullPageSliderSlideImg>
             )}
             <FadeIn>

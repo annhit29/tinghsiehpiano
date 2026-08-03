@@ -43,12 +43,12 @@ const events: CalendarEvent[] = [
     },
     {
         id: "recital-oct26",
-        title: "Piano Solo Recital",
+        title: "Piano Recital",
         date: "2026-10-29",
         displayDate: "October 29, 2026",
         venue: "National Taiwan Concert Hall",
-        description: "",
-        href: "",
+        description: "All Schumann. Pure Romantic piano.",
+        href: "https://www.opentix.life/event/2082315899354886144",
         bgText: "Schedule3",
     },
     {
